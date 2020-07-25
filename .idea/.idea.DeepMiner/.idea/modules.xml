@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/.idea.DeepMiner.iml" filepath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/.idea.DeepMiner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/.idea.DeepMiner/riderModule.iml" filepath="$PROJECT_DIR$/.idea/.idea.DeepMiner/riderModule.iml" />
+    </modules>
+  </component>
+</project>
