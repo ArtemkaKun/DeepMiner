@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ca4d650-b1ad-4fce-a72c-9e9bb4c2fcca" name="Default Changelist" comment="" />
+    <list default="true" id="9ca4d650-b1ad-4fce-a72c-9e9bb4c2fcca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/StructuresAndDataClasses/NeighborhoodStructuresAndDataClasses/NeighborhoodInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -84,7 +88,7 @@
       <updated>1595626369804</updated>
       <workItem from="1595626378895" duration="2828000" />
       <workItem from="1595666464636" duration="3401000" />
-      <workItem from="1595681518330" duration="4554000" />
+      <workItem from="1595681518330" duration="6151000" />
     </task>
     <servers />
   </component>
