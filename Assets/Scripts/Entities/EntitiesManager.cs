@@ -22,11 +22,14 @@ public class EntitiesManager : MonoBehaviour
 
     private void CreateGroundCellEntity()
     {
-        var groundCellPrefab = Resources.Load<GameObject>("Prefabs/GroundCell");
-        var groundCellEntity = GameObjectConversionUtility.ConvertGameObjectHierarchy(groundCellPrefab,
-            GameObjectConversionSettings.FromWorld(_entityManager.World, _blobAssetStore));
-        
-        _gameEntities["GroundCell"] = groundCellEntity;
+        var groundCellsPrefabs = Resources.LoadAll<GameObject>("Prefabs/GroundCells/");
+        foreach (var cellPrefab in groundCellsPrefabs)
+        {
+            var groundCellEntity = GameObjectConversionUtility.ConvertGameObjectHierarchy(cellPrefab,
+                GameObjectConversionSettings.FromWorld(_entityManager.World, _blobAssetStore));
+            
+            _gameEntities[cellPrefab.name] = groundCellEntity;
+        }
     }
 
     public static Entity GetEntity(string entityName)

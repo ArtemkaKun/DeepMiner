@@ -10,7 +10,12 @@ public class GroundSpawnSystem : MonoBehaviour
     private const int MaxGroundCells = 540;
     private const int MaxGroundCellInRow = 18;
     private const int StartLayerForEmptyCells = -2;
+    private const int StartLayerForStonesCells = -4;
+    private const int LayersCountForStoneCellSpawnIncrease = 10;
+    private const float MaxStoneCellSpawnChance = 0.8f;
+    
     private const float MakeEmptyCellChance = 0.1f;
+    private float SpawnStoneCellChance = 0.5f;
     
     private Random _randomSeed;
     private int _xSpawnOffset;
@@ -32,13 +37,15 @@ public class GroundSpawnSystem : MonoBehaviour
         for (var i = 0; i < groundCells.Length; i++)
         {
             CheckForNewRow(i);
-
+            CheckForStoneCellSpawnChanceIncrease(i);
+            
             if (SetEmptyCell())
             {
                 EntitiesManager.EntityManager.DestroyEntity(groundCells[i]);
             }
             else
             {
+                SpawnStoneCell(i, ref groundCells);
                 EntitiesManager.EntityManager.SetComponentData(groundCells[i], new Translation
                 {
                     Value = new float3(_xSpawnOffset, _ySpawnOffset, 0)
@@ -57,9 +64,25 @@ public class GroundSpawnSystem : MonoBehaviour
         _xSpawnOffset = 0;
     }
 
+    private void CheckForStoneCellSpawnChanceIncrease(int i)
+    {
+        if (i == 0 || i % LayersCountForStoneCellSpawnIncrease != 0 || SpawnStoneCellChance >= MaxStoneCellSpawnChance) return;
+        SpawnStoneCellChance += 0.05f;
+    }
+
     private bool SetEmptyCell()
     {
         var randomFloat = new Unity.Mathematics.Random((uint) _randomSeed.Next()).NextFloat();
         return _ySpawnOffset < StartLayerForEmptyCells && randomFloat < MakeEmptyCellChance;
+    }
+
+    private void SpawnStoneCell(int i, ref NativeArray<Entity> groundCells)
+    {
+        var randomFloat = new Unity.Mathematics.Random((uint) _randomSeed.Next()).NextFloat();
+
+        if (_ySpawnOffset < StartLayerForStonesCells && randomFloat < SpawnStoneCellChance)
+        {
+            groundCells[i] = EntitiesManager.EntityManager.Instantiate(EntitiesManager.GetEntity("StoneCell"));
+        }
     }
 }
