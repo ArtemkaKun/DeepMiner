@@ -21,13 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ca4d650-b1ad-4fce-a72c-9e9bb4c2fcca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCell.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCell.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/LavaCell.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/LavaCell.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/StoneCell.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/StoneCell.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +54,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34995976" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30008045" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -73,10 +68,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9184">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="9184" />
       <method v="2" />
     </configuration>
   </component>
@@ -92,7 +87,7 @@
       <updated>1595626369804</updated>
       <workItem from="1595626378895" duration="2828000" />
       <workItem from="1595666464636" duration="3401000" />
-      <workItem from="1595681518330" duration="2708000" />
+      <workItem from="1595681518330" duration="3955000" />
     </task>
     <servers />
   </component>
@@ -112,5 +107,90 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2517" height="523" key="GridCell.Tab.0.bottom" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.0.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.0.center" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.0.center/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.0.left" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.0.left/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.0.right" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.0.right/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.1.bottom" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.1.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.1.center" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.1.center/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.1.left" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.1.left/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.1.right" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.1.right/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.2.bottom" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.2.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.2.center" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.2.center/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.2.left" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.2.left/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.2.right" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.2.right/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.3.bottom" timestamp="1595687012437">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.3.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012437" />
+    <state width="2517" height="523" key="GridCell.Tab.3.center" timestamp="1595687012437">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.3.center/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012437" />
+    <state width="2517" height="523" key="GridCell.Tab.3.left" timestamp="1595687012436">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.3.left/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012436" />
+    <state width="2517" height="523" key="GridCell.Tab.3.right" timestamp="1595687012437">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.3.right/0.0.2560.1409@0.0.2560.1409" timestamp="1595687012437" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs</url>
+          <line>43</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" initialLine="43">
+            <startOffsets>
+              <option value="1349" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1393" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
