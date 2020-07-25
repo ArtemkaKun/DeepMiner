@@ -15,6 +15,7 @@ public class GroundSpawnSystem : MonoBehaviour
     private const int StartLayerForLavaCells = -19;
     private const int StartLayerForCoalCells = -2;
     private const int StartLayerForSilverCells = -4;
+    private const int StartLayerForGoldenCells = -8;
     
     private const int LayersCountForStoneCellSpawnIncrease = 10;
     private const int LayersCountForLavaCellSpawnIncrease = 20;
@@ -25,6 +26,7 @@ public class GroundSpawnSystem : MonoBehaviour
 
     private const float SpawnCoalCellChance = 0.2f;
     private const float SpawnSilverCellChance = 0.15f;
+    private const float SpawnGoldenCellChance = 0.1f;
     private float SpawnStoneCellChance = 0.5f;
     private float SpawnLavaCellChance = 0.1f;
     
@@ -127,6 +129,9 @@ public class GroundSpawnSystem : MonoBehaviour
 
         switch (randomFloat)
         {
+            case var _ when randomFloat <= SpawnGoldenCellChance:
+                SpawnGolden(i, ref groundCells);
+                break;
             case var _ when randomFloat <= SpawnSilverCellChance:
                 SpawnSilver(i, ref groundCells);
                 break;
@@ -136,6 +141,15 @@ public class GroundSpawnSystem : MonoBehaviour
         }
     }
 
+    private void SpawnGolden(int i, ref NativeArray<Entity> groundCells)
+    {
+        if (_ySpawnOffset < StartLayerForGoldenCells)
+        {
+            EntitiesManager.EntityManager.DestroyEntity(groundCells[i]);
+            groundCells[i] = EntitiesManager.EntityManager.Instantiate(EntitiesManager.GetEntity("GoldenCell"));
+        }
+    }
+    
     private void SpawnSilver(int i, ref NativeArray<Entity> groundCells)
     {
         if (_ySpawnOffset < StartLayerForSilverCells)
