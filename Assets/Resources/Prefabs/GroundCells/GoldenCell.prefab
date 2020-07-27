@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5943799099312879943}
   - component: {fileID: 3851274785401357116}
+  - component: {fileID: 8633953543281687193}
   m_Layer: 0
   m_Name: GoldenCell
   m_TagString: Untagged
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8633953543281687193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595044551591401601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404137d6e2f2b4243b8becf8d144de65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Durability: 85
+  Weight: 15
+  Cost: 100

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1312466640148934451}
   - component: {fileID: 4340291307244871312}
+  - component: {fileID: 491245897153507846}
   m_Layer: 0
   m_Name: StoneCell
   m_TagString: Untagged
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &491245897153507846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2150201885248517337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404137d6e2f2b4243b8becf8d144de65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Durability: 100
+  Weight: 25
+  Cost: 15
