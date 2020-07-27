@@ -31,6 +31,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/CityTrafficSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/TrafficECS.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,6 +46,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +90,7 @@
       <workItem from="1595626378895" duration="2828000" />
       <workItem from="1595666464636" duration="3401000" />
       <workItem from="1595681518330" duration="6606000" />
-      <workItem from="1595874332788" duration="704000" />
+      <workItem from="1595874332788" duration="1356000" />
     </task>
     <servers />
   </component>

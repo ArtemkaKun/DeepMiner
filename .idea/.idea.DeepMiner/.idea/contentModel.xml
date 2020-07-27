@@ -7,6 +7,7 @@
         <e p="Scripts" t="Include">
           <e p="Componens" t="Include">
             <e p="GroundCellComponent.cs" t="Include" />
+            <e p="MoveComponent.cs" t="Include" />
           </e>
           <e p="Entities" t="Include">
             <e p="EntitiesManager.cs" t="Include" />
