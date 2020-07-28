@@ -6,6 +6,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Componens" t="Include">
+            <e p="DrillComponent.cs" t="Include" />
             <e p="GroundCellComponent.cs" t="Include" />
             <e p="MoveComponent.cs" t="Include" />
           </e>
@@ -13,6 +14,7 @@
             <e p="EntitiesManager.cs" t="Include" />
           </e>
           <e p="Systems" t="Include">
+            <e p="DiggingSystem.cs" t="Include" />
             <e p="GroundSpawnSystem.cs" t="Include" />
             <e p="MoveSystem.cs" t="Include" />
           </e>
