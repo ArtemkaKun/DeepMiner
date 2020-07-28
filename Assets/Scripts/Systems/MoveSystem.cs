@@ -1,20 +1,20 @@
-﻿using System;
-using Unity.Entities;
-using Unity.Transforms;
+﻿using Unity.Entities;
+using Unity.Mathematics;
+using Unity.Physics;
 using UnityEngine;
+using Math = System.Math;
 
 public class MoveSystem : ComponentSystem
 {
     protected override void OnUpdate()
     {
-        Entities.ForEach((ref Translation translation, ref MoveComponent moveComponent) =>
+        Entities.ForEach((ref MoveComponent moveComponent, ref PhysicsVelocity velocity, ref PhysicsMass mass) =>
         {
             var horizontalAxisValue = Input.GetAxis("Horizontal");
-            
-            if (Math.Abs(horizontalAxisValue) > 0.001f)
-            {
-                translation.Value.x += horizontalAxisValue * moveComponent.Speed * Time.DeltaTime;
-            }
+            var verticalAxisValue = Input.GetAxis("Vertical");
+
+            mass.InverseInertia = new float3(0);
+            velocity.Linear += new float3(horizontalAxisValue * moveComponent.Speed , verticalAxisValue * moveComponent.HorizontalForce, 0) * Time.DeltaTime;
         });
     }
 }
