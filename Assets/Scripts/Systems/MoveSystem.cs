@@ -2,8 +2,8 @@
 using Unity.Mathematics;
 using Unity.Physics;
 using UnityEngine;
-using Math = System.Math;
 
+[UpdateAfter(typeof(DrillSystem))]
 public class MoveSystem : ComponentSystem
 {
     protected override void OnUpdate()
