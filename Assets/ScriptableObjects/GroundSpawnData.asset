@@ -26,7 +26,7 @@ MonoBehaviour:
   spawnCoalCellChance: 0.2
   spawnSilverCellChance: 0.15
   spawnGoldenCellChance: 0.1
-  spawnStoneCellChance: 0.8000001
-  spawnLavaCellChance: 0.40000004
+  spawnStoneCellChance: 0.4
+  spawnLavaCellChance: 0.4
   maxStoneCellSpawnChance: 0.8
   maxLavaCellSpawnChance: 0.4

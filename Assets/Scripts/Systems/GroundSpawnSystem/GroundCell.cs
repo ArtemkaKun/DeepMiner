@@ -17,34 +17,45 @@ namespace Systems.GroundSpawnSystem
             _groundGeneratorData = groundGeneratorData;
             _randomSeed = new Random();
         }
-        
-        public bool SetEmptyCell(int ySpawnOffset)
-        {
-            return ySpawnOffset < _groundGeneratorData.startLayerForEmptyCells && GetRandomFloat() < _groundGeneratorData.spawnEmptyCellChance;
-        }
 
-        public void TrySpawnStoneCell(int i, int ySpawnOffset, ref NativeArray<Entity> groundCells)
-        {
-            if (ySpawnOffset < _groundGeneratorData.startLayerForStonesCells && GetRandomFloat() < _groundGeneratorData.spawnStoneCellChance)
-            {
-                SpawnCell("StoneCell", i, ref groundCells);
-            }
-        }
-    
-        public void TrySpawnLavaCell(int i, int ySpawnOffset, ref NativeArray<Entity> groundCells)
-        {
-            if (ySpawnOffset < _groundGeneratorData.startLayerForLavaCells && GetRandomFloat() < _groundGeneratorData.spawnLavaCellChance)
-            {
-                SpawnCell("LavaCell", i, ref groundCells);
-            }
-        }
-
-        public void TrySpawnOre(int i, int ySpawnOffset, ref NativeArray<Entity> groundCells)
+        public bool SpawnNewCell(int i, int ySpawnOffset, ref NativeArray<Entity> groundCells)
         {
             var randomFloat = GetRandomFloat();
-
             string cellName;
-            switch (randomFloat)
+            
+            switch(randomFloat)
+            {
+                case var _ when ySpawnOffset <= _groundGeneratorData.startLayerForEmptyCells && randomFloat <= _groundGeneratorData.spawnEmptyCellChance:
+                    return false;
+                case var _ when ySpawnOffset <= _groundGeneratorData.startLayerForLavaCells && randomFloat <= _groundGeneratorData.spawnLavaCellChance:
+                    cellName = "LavaCell";
+                    break;
+                case var _ when ySpawnOffset <= _groundGeneratorData.startLayerForStonesCells && randomFloat <= _groundGeneratorData.spawnStoneCellChance:
+                    cellName = "StoneCell";
+                    break;
+                default:
+                    cellName = SpawnOre(ySpawnOffset);
+                    break;
+            }
+
+            if (cellName != "")
+            {
+                SpawnCell(cellName, i, ref groundCells);
+            }
+            else
+            {
+                SpawnCell("GroundCell", i, ref groundCells);
+            }
+
+            return true;
+        }
+
+        private string SpawnOre(int ySpawnOffset)
+        {
+            var randomFloat = GetRandomFloat();
+            
+            string cellName;
+            switch(randomFloat)
             {
                 case var _ when randomFloat <= _groundGeneratorData.spawnGoldenCellChance && ySpawnOffset <= _groundGeneratorData.startLayerForGoldenCells:
                     cellName = "GoldenCell";
@@ -56,9 +67,11 @@ namespace Systems.GroundSpawnSystem
                     cellName = "CoalCell";
                     break;
                 default:
-                    return;
+                    cellName = "";
+                    break;
             }
-            SpawnCell(cellName, i, ref groundCells);
+            
+            return cellName;
         }
 
         private void SpawnCell(string cellName, int i, ref NativeArray<Entity> groundCells)
