@@ -1,67 +1,71 @@
-﻿using System.Collections;
-using Unity.Entities;
+﻿using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Physics.Systems;
 using Unity.Transforms;
 using UnityEngine;
-using RaycastHit = Unity.Physics.RaycastHit;
 
-public class DrillSystem : ComponentSystem
+namespace Systems
 {
-    private const float RayLength = 1;
-    private CollisionFilter _groundCollisionFilter;
-
-    protected override void OnCreate()
+    public class DrillSystem : ComponentSystem
     {
-        base.OnCreate();
+        private const float RayLength = 1;
+        private CollisionFilter _groundCollisionFilter;
+        private EntityManager _entityManager;
 
-        _groundCollisionFilter = new CollisionFilter
+        protected override void OnCreate()
         {
-            BelongsTo = 2u,
-            CollidesWith = 1u,
-            GroupIndex = 0
-        };
-    }
+            base.OnCreate();
 
-    protected override void OnUpdate()
-    {
-        Entities.ForEach((ref Translation translation, ref DrillComponent drill) =>
-        {
-            var verticalAxisValue = Input.GetAxis("Vertical");
-
-            if (verticalAxisValue >= 0) return;
-
-            var hitGroundCell = CastRayToGround(translation.Value);
-            if (hitGroundCell == Entity.Null) return;
+            _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
             
-            var translationComponentFromEntity = GetComponentDataFromEntity<Translation>(true);
-            var groundCellTranslation = translationComponentFromEntity[hitGroundCell];
-            translation.Value = new float3(groundCellTranslation.Value.x, translation.Value.y, 0);
-
-            var waitTime = 1f;
-            do
+            _groundCollisionFilter = new CollisionFilter
             {
-                waitTime -= Time.DeltaTime;
-            } while (waitTime <= 0);
-            
-            EntitiesManager.EntityManager.DestroyEntity(hitGroundCell);
-        });
-    }
+                BelongsTo = 2u,
+                CollidesWith = 1u,
+                GroupIndex = 0
+            };
+        }
 
-    private Entity CastRayToGround(float3 playerPosition)
-    {
-        var physicWorld = World.DefaultGameObjectInjectionWorld.GetOrCreateSystem<BuildPhysicsWorld>();
-        var collisionWorld = physicWorld.PhysicsWorld.CollisionWorld;
-
-        var ray = new RaycastInput
+        protected override void OnUpdate()
         {
-            Start = playerPosition,
-            End = playerPosition + new float3(0, -RayLength, 0),
-            Filter = _groundCollisionFilter
-        };
+            Entities.ForEach((ref Translation translation, ref DrillComponent drill) =>
+            {
+                var verticalAxisValue = Input.GetAxis("Vertical");
 
-        collisionWorld.CastRay(ray, out var hit);
-        return hit.Entity;
+                if (verticalAxisValue >= 0) return;
+
+                var hitGroundCell = CastRayToGround(translation.Value);
+                if (hitGroundCell == Entity.Null) return;
+            
+                var translationComponentFromEntity = GetComponentDataFromEntity<Translation>(true);
+                var groundCellTranslation = translationComponentFromEntity[hitGroundCell];
+                translation.Value = new float3(groundCellTranslation.Value.x, translation.Value.y, 0);
+
+                var waitTime = 1f;
+                do
+                {
+                    waitTime -= Time.DeltaTime;
+                } while (waitTime <= 0);
+            
+                _entityManager.DestroyEntity(hitGroundCell);
+            });
+        }
+
+        private Entity CastRayToGround(float3 playerPosition)
+        {
+            var physicWorld = World.DefaultGameObjectInjectionWorld.GetOrCreateSystem<BuildPhysicsWorld>();
+            var collisionWorld = physicWorld.PhysicsWorld.CollisionWorld;
+
+            var ray = new RaycastInput
+            {
+                Start = playerPosition,
+                End = playerPosition + new float3(0, -RayLength, 0),
+                Filter = _groundCollisionFilter
+            };
+
+            collisionWorld.CastRay(ray, out var hit);
+            return hit.Entity;
+        }
     }
 }

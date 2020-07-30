@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a640f634de7af0469a434dccb366499, type: 3}
+  m_Name: GroundSpawnData
+  m_EditorClassIdentifier: 
+  maxGroundCells: 540
+  maxGroundCellInRow: 18
+  startLayerForEmptyCells: -2
+  startLayerForStonesCells: -4
+  startLayerForLavaCells: -19
+  startLayerForCoalCells: -2
+  startLayerForSilverCells: -4
+  startLayerForGoldenCells: -8
+  layersForStoneCellSpawnIncrease: 10
+  layersForLavaCellSpawnIncrease: 20
+  spawnEmptyCellChance: 0.1
+  spawnCoalCellChance: 0.2
+  spawnSilverCellChance: 0.15
+  spawnGoldenCellChance: 0.1
+  spawnStoneCellChance: 0.8000001
+  spawnLavaCellChance: 0.40000004
+  maxStoneCellSpawnChance: 0.8
+  maxLavaCellSpawnChance: 0.4
