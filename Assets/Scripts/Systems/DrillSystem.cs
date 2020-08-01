@@ -10,7 +10,7 @@ namespace Systems
 {
     public class DrillSystem : ComponentSystem
     {
-        private const float RayLength = 1;
+        private const float RayLength = 0.5f;
         private const float DrillDelay = 3;
         
         private CollisionFilter _groundCollisionFilter;
@@ -87,7 +87,7 @@ namespace Systems
         {
             if (Math.Abs(verticalAxisValue) < 0.001f && Math.Abs(horizontalAxisValue) > 0.001f)
             {
-                _cellToDrill = CastRay(translation.Value, new float3(Mathf.Sign(horizontalAxisValue) * (RayLength - 0.5f), 0, 0));
+                _cellToDrill = CastRay(translation.Value, new float3(Mathf.Sign(horizontalAxisValue) * (RayLength - 0.1f), 0, 0));
             }
             
             return _cellToDrill != Entity.Null;
