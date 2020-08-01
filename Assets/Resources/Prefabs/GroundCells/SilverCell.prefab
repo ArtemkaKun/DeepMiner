@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404137d6e2f2b4243b8becf8d144de65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 75
-  Weight: 15
-  Cost: 75
+  Durability: 15
+  Weight: 10
+  Cost: 50
 --- !u!114 &-8396818188546748220
 MonoBehaviour:
   m_ObjectHideFlags: 0

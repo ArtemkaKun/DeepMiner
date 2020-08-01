@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404137d6e2f2b4243b8becf8d144de65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 50
-  Weight: 15
+  Durability: 10
+  Weight: 10
   Cost: 10
 --- !u!114 &4937179594359492052
 MonoBehaviour:
