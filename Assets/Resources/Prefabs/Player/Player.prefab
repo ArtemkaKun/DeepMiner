@@ -356,5 +356,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb726b59ed82b3448c73abf28aa4b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DrillPower: 15
+  DrillPower: 20
   IsDrilling: 0
