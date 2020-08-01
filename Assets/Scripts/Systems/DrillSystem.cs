@@ -1,4 +1,5 @@
-﻿using Unity.Entities;
+﻿using System.Runtime.CompilerServices;
+using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Physics.Systems;
@@ -49,8 +50,8 @@ namespace Systems
                 {
                     var horizontalAxisValue = Input.GetAxis("Horizontal");
                     var verticalAxisValue = Input.GetAxis("Vertical");
-
-                    if (verticalAxisValue > 0) return;
+                    
+                    if (verticalAxisValue > 0 || !Input.GetButton("B Button")) return;
 
                     if (TryDrillByZ(verticalAxisValue, horizontalAxisValue, ref translation) ||
                         TryDrillByX(verticalAxisValue, horizontalAxisValue, ref translation))
@@ -87,7 +88,7 @@ namespace Systems
         {
             if (Math.Abs(verticalAxisValue) < 0.001f && Math.Abs(horizontalAxisValue) > 0.001f)
             {
-                _cellToDrill = CastRay(translation.Value, new float3(Mathf.Sign(horizontalAxisValue) * (RayLength - 0.1f), 0, 0));
+                _cellToDrill = CastRay(translation.Value, new float3(Mathf.Sign(horizontalAxisValue) * RayLength, 0, 0));
             }
             
             return _cellToDrill != Entity.Null;
