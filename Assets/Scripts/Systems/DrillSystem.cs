@@ -1,5 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using Unity.Entities;
+﻿using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Physics.Systems;
@@ -11,7 +10,7 @@ namespace Systems
 {
     public class DrillSystem : ComponentSystem
     {
-        private const float RayLength = 0.5f;
+        private const float RayLength = 0.6f;
         private const float DrillDelay = 3;
         
         private CollisionFilter _groundCollisionFilter;
@@ -41,9 +40,8 @@ namespace Systems
                 if (drill.IsDrilling)
                 {
                     _timeBuffer += Time.DeltaTime;
-
                     if (_timeBuffer < DrillDelay) return;
-
+                    
                     CompleteDrillAction(ref drill);
                 }
                 else
@@ -53,8 +51,7 @@ namespace Systems
                     
                     if (verticalAxisValue > 0 || !Input.GetButton("B Button")) return;
 
-                    if (TryDrillByZ(verticalAxisValue, horizontalAxisValue, ref translation) ||
-                        TryDrillByX(verticalAxisValue, horizontalAxisValue, ref translation))
+                    if (TryDrillByZ(verticalAxisValue, horizontalAxisValue, ref translation) || TryDrillByX(verticalAxisValue, horizontalAxisValue, ref translation))
                     {
                         drill.IsDrilling = true;
                     }
@@ -72,7 +69,7 @@ namespace Systems
 
         private bool TryDrillByZ(float verticalAxisValue, float horizontalAxisValue, ref Translation translation)
         {
-            if (verticalAxisValue < 0 && Math.Abs(horizontalAxisValue) < 0.001f)
+            if (verticalAxisValue < 0 && Math.Abs(horizontalAxisValue) < 0.5f)
             {
                 _cellToDrill = CastRay(translation.Value, new float3(0, -RayLength, 0));
             }
@@ -86,7 +83,7 @@ namespace Systems
         
         private bool TryDrillByX(float verticalAxisValue, float horizontalAxisValue, ref Translation translation)
         {
-            if (Math.Abs(verticalAxisValue) < 0.001f && Math.Abs(horizontalAxisValue) > 0.001f)
+            if (Math.Abs(verticalAxisValue) < 0.5f && Math.Abs(horizontalAxisValue) > 0.001f)
             {
                 _cellToDrill = CastRay(translation.Value, new float3(Mathf.Sign(horizontalAxisValue) * RayLength, 0, 0));
             }
