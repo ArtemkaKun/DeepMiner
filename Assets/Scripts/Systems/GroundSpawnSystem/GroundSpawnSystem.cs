@@ -9,12 +9,11 @@ using UnityEngine;
 public class GroundSpawnSystem : MonoBehaviour
 {
     [SerializeField] private GroundGeneratorData groundGeneratorData;
-    
-    private EntityManager _entityManager;
-    private GroundCell _groundCell;
 
     private int _xSpawnOffset;
-    private int _ySpawnOffset;
+    private EntityManager _entityManager;
+    private GroundCell _groundCell;
+    public int YSpawnOffset { get; private set; }
 
     private void Awake()
     {
@@ -24,36 +23,52 @@ public class GroundSpawnSystem : MonoBehaviour
 
     private void Start()
     {
-        var groundCells = new NativeArray<Entity>(groundGeneratorData.maxGroundCellsOnStart, Allocator.Temp);
-        _entityManager.Instantiate(new GameObject(), groundCells);
-
-        SpawnGround(groundCells);
-        groundCells.Dispose();
+        SpawnGround(true);
     }
 
-    private void SpawnGround(NativeArray<Entity> groundCells)
+    public void SpawnGround(bool startGeneration = false)
+    {
+        var groundCells = new NativeArray<Entity>(startGeneration ? groundGeneratorData.maxGroundCellsOnStart : groundGeneratorData.maxGroundCellInRowOnStart, Allocator.Temp);
+        var tempObject = new GameObject();
+        
+        _entityManager.Instantiate(tempObject, groundCells);
+        
+        SpawnGroundCells(groundCells);
+
+        groundCells.Dispose();
+        DestroyImmediate(tempObject);
+    }
+
+    private void SpawnGroundCells(NativeArray<Entity> groundCells)
     {
         for (var i = 0; i < groundCells.Length; i++)
         {
             CheckForNewRow(i);
             
-            if (_groundCell.SpawnNewCell(i, _ySpawnOffset, ref groundCells))
+            if (_groundCell.SpawnNewCell(i, YSpawnOffset, ref groundCells))
             {
                 _entityManager.SetComponentData(groundCells[i], new Translation
                 {
-                    Value = new float3(_xSpawnOffset, _ySpawnOffset, 0)
+                    Value = new float3(_xSpawnOffset, YSpawnOffset, 0)
                 });
             }
             
             ++_xSpawnOffset;
         }
+        
+        SetNewRow();
     }
 
     private void CheckForNewRow(int i)
     {
         if (i == 0 || i % groundGeneratorData.maxGroundCellInRowOnStart != 0) return;
 
-        --_ySpawnOffset;
+        SetNewRow();
+    }
+
+    private void SetNewRow()
+    {
+        --YSpawnOffset;
         _xSpawnOffset = 0;
     }
 }

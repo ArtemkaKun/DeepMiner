@@ -12,21 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a640f634de7af0469a434dccb366499, type: 3}
   m_Name: GroundSpawnData
   m_EditorClassIdentifier: 
-  maxGroundCells: 540
-  maxGroundCellInRow: 18
+  maxGroundCellsOnStart: 90
+  maxGroundCellInRowOnStart: 18
   startLayerForEmptyCells: -2
   startLayerForStonesCells: -4
   startLayerForLavaCells: -19
   startLayerForCoalCells: -2
   startLayerForSilverCells: -4
   startLayerForGoldenCells: -8
-  layersForStoneCellSpawnIncrease: 10
-  layersForLavaCellSpawnIncrease: 20
   spawnEmptyCellChance: 0.1
   spawnCoalCellChance: 0.2
   spawnSilverCellChance: 0.15
   spawnGoldenCellChance: 0.1
   spawnStoneCellChance: 0.4
   spawnLavaCellChance: 0.4
-  maxStoneCellSpawnChance: 0.8
-  maxLavaCellSpawnChance: 0.4

@@ -8,7 +8,6 @@ namespace Entities
     {
         private EntityManager _entityManager;
         private static Dictionary<string, Entity> _gameEntities;
-    
         private BlobAssetStore _blobAssetStore;
 
         private void Awake()
