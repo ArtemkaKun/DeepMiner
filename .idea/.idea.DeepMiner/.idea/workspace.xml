@@ -22,7 +22,13 @@
     <list default="true" id="9ca4d650-b1ad-4fce-a72c-9e9bb4c2fcca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drill.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +75,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/GroundSpawnComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" />
       </list>
     </option>
   </component>
@@ -124,7 +130,8 @@
       <workItem from="1596309531183" duration="1774000" />
       <workItem from="1596376529680" duration="2733000" />
       <workItem from="1596735758426" duration="2408000" />
-      <workItem from="1596822851277" duration="527000" />
+      <workItem from="1596822851277" duration="715000" />
+      <workItem from="1596878178194" duration="959000" />
     </task>
     <servers />
   </component>
