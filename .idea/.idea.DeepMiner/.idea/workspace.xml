@@ -34,6 +34,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/CityTrafficSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.13.0-preview.24/Unity.Entities/EntityQueryBuilder_ForEach.gen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/TrafficECS.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" root0="FORCE_HIGHLIGHTING" />
@@ -77,6 +78,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/CameraFollowSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PhysicsRestrictsSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" />
       </list>
     </option>
@@ -133,7 +135,7 @@
       <workItem from="1596735758426" duration="2408000" />
       <workItem from="1596822851277" duration="715000" />
       <workItem from="1596878178194" duration="959000" />
-      <workItem from="1596966821066" duration="6152000" />
+      <workItem from="1596966821066" duration="6645000" />
     </task>
     <servers />
   </component>
