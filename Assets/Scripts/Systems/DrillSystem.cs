@@ -1,4 +1,5 @@
-﻿using Unity.Entities;
+﻿using Entities;
+using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Physics.Systems;
@@ -76,6 +77,7 @@ namespace Systems
             if (_cellToDrill == Entity.Null || !CheckAbilityToDrillCell(_cellToDrill, drillPower)) return false;
 
             AdjustPlayerPosition(_cellToDrill, ref translation);
+            EntitiesManager.CurrentPlayerMaterial = EntitiesManager.FrontPlayerMaterial;
             CalculateDrillSpeed(_cellToDrill, drillPower);
             
             return true;
@@ -87,7 +89,9 @@ namespace Systems
             {
                 _cellToDrill = CastRay(translation.Value, new float3(Mathf.Sign(axisValues.x) * RayLength, 0, 0));
             }
-
+            
+            if (_cellToDrill == Entity.Null || !CheckAbilityToDrillCell(_cellToDrill, drillPower)) return false;
+            
             CalculateDrillSpeed(_cellToDrill, drillPower);
             
             return _cellToDrill != Entity.Null && CheckAbilityToDrillCell(_cellToDrill, drillPower);
