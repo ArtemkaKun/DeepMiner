@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 7657378055233842195}
   - component: {fileID: -5166331057621815983}
   - component: {fileID: 9151128422235188667}
-  - component: {fileID: 5737664184224950897}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -359,17 +358,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DrillPower: 20
   IsDrilling: 0
---- !u!114 &5737664184224950897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206087761067702793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb083e13a524b9469d6963c426a99d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SideSprite: {fileID: 2100000, guid: 6c16aa51fd25c584bb7ea14edca116dc, type: 2}
-  FrontSprite: {fileID: 2100000, guid: 4e20d8938d6e1ad41b2b4576bde3ffe4, type: 2}

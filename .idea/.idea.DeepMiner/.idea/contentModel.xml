@@ -12,7 +12,7 @@
             <e p="DrillComponent.cs" t="Include" />
             <e p="GroundCellComponent.cs" t="Include" />
             <e p="MoveComponent.cs" t="Include" />
-            <e p="PlayerSpritesComponent.cs" t="Include" />
+            <e p="PlayerRendererComponent.cs" t="Include" />
           </e>
           <e p="Entities" t="Include">
             <e p="EntitiesManager.cs" t="Include" />
@@ -27,6 +27,7 @@
             </e>
             <e p="MoveSystem.cs" t="Include" />
             <e p="PhysicsRestrictsSystem.cs" t="Include" />
+            <e p="PlayerRendererSystem.cs" t="Include" />
           </e>
         </e>
       </e>
