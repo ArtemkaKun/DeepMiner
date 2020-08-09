@@ -25,6 +25,7 @@
               <e p="GroundSpawnSystem.cs" t="Include" />
             </e>
             <e p="MoveSystem.cs" t="Include" />
+            <e p="PhysicsRestrictsSystem.cs" t="Include" />
           </e>
         </e>
       </e>
