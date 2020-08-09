@@ -12,11 +12,13 @@
             <e p="DrillComponent.cs" t="Include" />
             <e p="GroundCellComponent.cs" t="Include" />
             <e p="MoveComponent.cs" t="Include" />
+            <e p="PlayerSpritesComponent.cs" t="Include" />
           </e>
           <e p="Entities" t="Include">
             <e p="EntitiesManager.cs" t="Include" />
           </e>
           <e p="Systems" t="Include">
+            <e p="CameraFollowSystem.cs" t="Include" />
             <e p="DrillSystem.cs" t="Include" />
             <e p="GroundSpawnSystem" t="Include">
               <e p="GroundCell.cs" t="Include" />

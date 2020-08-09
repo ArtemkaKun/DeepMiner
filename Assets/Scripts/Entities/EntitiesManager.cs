@@ -10,6 +10,8 @@ namespace Entities
         private static Dictionary<string, Entity> _gameEntities;
         private BlobAssetStore _blobAssetStore;
 
+        public static Mesh playerMesh;
+
         private void Awake()
         {
             _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
