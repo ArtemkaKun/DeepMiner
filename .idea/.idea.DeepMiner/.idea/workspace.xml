@@ -21,9 +21,29 @@
   <component name="ChangeListManager">
     <list default="true" id="9ca4d650-b1ad-4fce-a72c-9e9bb4c2fcca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/CoalCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/CoalCell.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/GoldenCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/GoldenCell.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/GroundCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/GroundCell.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/LavaCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/LavaCell.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/SilverCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/SilverCell.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/StoneCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/StoneCell.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +56,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/CityTrafficSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.13.0-preview.24/Unity.Entities/EntityQueryBuilder_ForEach.gen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/TrafficECS.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarEntity.cs" root0="SKIP_HIGHLIGHTING" />
@@ -51,8 +70,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScriptableObjects/GroundGeneratorData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.13.0-preview.24/Unity.Entities/ComponentSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/StructuresAndDataClasses/NeighborhoodStructuresAndDataClasses/NeighborhoodInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,7 +81,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/GroundCell.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/ScriptableObjects/GeneratorData.cs" />
@@ -73,16 +91,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/CameraControlSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/CameraComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/GroundSpawnComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/PlayerSpritesComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/CameraFollowSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PhysicsRestrictsSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/PlayerRendererComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" />
       </list>
     </option>
   </component>
@@ -106,10 +127,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11904">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11904" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -139,6 +160,8 @@
       <workItem from="1596822851277" duration="715000" />
       <workItem from="1596878178194" duration="959000" />
       <workItem from="1596966821066" duration="10686000" />
+      <workItem from="1597079779893" duration="3691000" />
+      <workItem from="1597500582140" duration="3944000" />
     </task>
     <servers />
   </component>

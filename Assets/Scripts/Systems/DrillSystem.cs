@@ -62,8 +62,14 @@ namespace Systems
         private void CompleteDrillAction(ref DrillComponent drill)
         {
             _timeBuffer = 0;
+            
+            var cellComponent = GetGroundCellComponent(_cellToDrill);
+            UI.AddMoney(cellComponent.Cost);
+            UI.IncreaseScore(cellComponent.ScorePoints);
+            
             World.DefaultGameObjectInjectionWorld.EntityManager.DestroyEntity(_cellToDrill);
             _cellToDrill = Entity.Null;
+
             drill.IsDrilling = false;
         }
 

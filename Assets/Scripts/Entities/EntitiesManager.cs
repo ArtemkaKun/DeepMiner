@@ -6,8 +6,8 @@ namespace Entities
 {
     public class EntitiesManager : MonoBehaviour
     {
-        private EntityManager _entityManager;
         private static Dictionary<string, Entity> _gameEntities;
+        private EntityManager _entityManager;
         private BlobAssetStore _blobAssetStore;
         
         public static Material CurrentPlayerMaterial;
@@ -23,7 +23,7 @@ namespace Entities
             SidePlayerMaterial = Resources.Load<Material>("Materials/PlayerMaterial");
             FrontPlayerMaterial = Resources.Load<Material>("Materials/PlayerMaterialFront");
             CurrentPlayerMaterial = SidePlayerMaterial;
-            
+
             CreateGroundCellEntity();
         }
 

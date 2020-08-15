@@ -107,7 +107,7 @@ MonoBehaviour:
     z: 0
   m_PrimitiveSize:
     x: 0.9552995
-    y: 0.64728665
+    y: 0.4744349
     z: 0.9
   m_PrimitiveOrientation:
     Value:
@@ -120,7 +120,7 @@ MonoBehaviour:
     Radius: 0.45
     Axis: 0
   m_Cylinder:
-    Height: 0.64728665
+    Height: 0.4744349
     Radius: 0.47764975
     Axis: 1
   m_CylinderSideCount: 20
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_MinimumSkinnedVertexWeight: 0.1
   m_ConvexHullGenerationParameters:
     m_SimplificationTolerance: 0.015
-    m_BevelRadius: 0.1
+    m_BevelRadius: 0.07635103
     m_MinimumAngle: 2.5000002
   m_CustomMesh: {fileID: 0}
   m_ForceUnique: 0

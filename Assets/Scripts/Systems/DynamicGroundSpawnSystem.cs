@@ -20,10 +20,10 @@ public class DynamicGroundSpawnSystem : ComponentSystem
     {
         Entities.ForEach((ref MoveComponent _, ref Translation translation) =>
         {
-            if (translation.Value.y <= _groundSpawner.YSpawnOffset + SpawnNewLayerOffset)
-            {
-                _groundSpawner.SpawnGround();
-            }
+            if (translation.Value.y > _groundSpawner.YSpawnOffset + SpawnNewLayerOffset) return;
+            
+            UI.IncreaseDepth();
+            _groundSpawner.SpawnGround();
         });
     }
 }

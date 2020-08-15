@@ -6,4 +6,5 @@ public struct GroundCellComponent : IComponentData
     public float Durability;
     public float Weight;
     public float Cost;
+    public int ScorePoints;
 }

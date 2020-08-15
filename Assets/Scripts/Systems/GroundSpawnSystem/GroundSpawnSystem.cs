@@ -1,4 +1,5 @@
-﻿using Systems.GroundSpawnSystem;
+﻿using System;
+using Systems.GroundSpawnSystem;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -6,11 +7,10 @@ using Unity.Transforms;
 using UnityEngine;
 using Random = System.Random;
 
-
 public class GroundSpawnSystem : MonoBehaviour
 {
     [SerializeField] private GroundGeneratorData groundGeneratorData;
-
+    
     private int _xSpawnOffset;
     private EntityManager _entityManager;
     private GroundCell _groundCell;
