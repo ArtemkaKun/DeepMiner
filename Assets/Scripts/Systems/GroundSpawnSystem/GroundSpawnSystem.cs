@@ -1,24 +1,27 @@
-﻿using Systems.GroundSpawnSystem;
+﻿using System;
+using Systems.GroundSpawnSystem;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
-
+using Random = System.Random;
 
 public class GroundSpawnSystem : MonoBehaviour
 {
     [SerializeField] private GroundGeneratorData groundGeneratorData;
-
+    
     private int _xSpawnOffset;
     private EntityManager _entityManager;
     private GroundCell _groundCell;
+    private Random _randomSeed;
     public int YSpawnOffset { get; private set; }
 
     private void Awake()
     {
         _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
         _groundCell = new GroundCell(groundGeneratorData);
+        _randomSeed = new Random();
     }
 
     private void Start()
@@ -51,6 +54,11 @@ public class GroundSpawnSystem : MonoBehaviour
                 {
                     Value = new float3(_xSpawnOffset, YSpawnOffset, 0)
                 });
+                
+                _entityManager.SetComponentData(groundCells[i], new Rotation
+                {
+                    Value = Quaternion.Euler(0, 0, RotateCellInRandomWay())
+                });
             }
             
             ++_xSpawnOffset;
@@ -65,10 +73,28 @@ public class GroundSpawnSystem : MonoBehaviour
 
         SetNewRow();
     }
-
+    
     private void SetNewRow()
     {
         --YSpawnOffset;
         _xSpawnOffset = 0;
+    }
+
+    private int RotateCellInRandomWay()
+    {
+        const int rotateStep = 90;
+        var randomInt = new Unity.Mathematics.Random((uint) _randomSeed.Next()).NextUInt(4);
+
+        switch (randomInt)
+        {
+            case 1:
+                return rotateStep;
+            case 2:
+                return rotateStep * 2;
+            case 3:
+                return rotateStep * 3;
+            default:
+                return 0;
+        }
     }
 }
