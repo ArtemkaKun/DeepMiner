@@ -271,8 +271,8 @@ MonoBehaviour:
   money: {fileID: 1626530451}
   depth: {fileID: 1970720847}
   score: {fileID: 782665075}
-  fuelBar: {fileID: 794194082}
-  occupiedSpaceBar: {fileID: 275691394}
+  fuelBarRef: {fileID: 1805453405}
+  occupiedSpaceBarRef: {fileID: 390592091}
 --- !u!1 &220849876
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 390592090}
+  - component: {fileID: 390592091}
   m_Layer: 5
   m_Name: occupiedSpaceBar
   m_TagString: Untagged
@@ -724,6 +725,19 @@ RectTransform:
   m_AnchoredPosition: {x: 101, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &390592091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390592089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81137567ba8f0547a637bf89ed25076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 275691394}
 --- !u!1 &431479156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1805453404}
+  - component: {fileID: 1805453405}
   m_Layer: 5
   m_Name: fuelBar
   m_TagString: Untagged
@@ -2340,6 +2355,19 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0}
+--- !u!114 &1805453405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805453403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81137567ba8f0547a637bf89ed25076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 794194082}
 --- !u!1 &1970720845
 GameObject:
   m_ObjectHideFlags: 0

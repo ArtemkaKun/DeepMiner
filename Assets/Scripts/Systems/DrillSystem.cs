@@ -54,7 +54,7 @@ namespace Systems
                     if (TryDrillByZ(axisValues, ref translation, drill.DrillPower) || TryDrillByX(axisValues, ref translation, drill.DrillPower))
                     {
                         drill.IsDrilling = true;
-                        UI.DecreaseFuel(drill.FuelConsumption);
+                        UI.FuelBar.DecreaseValue(drill.FuelConsumption);
                     }
                 }
             });
@@ -77,7 +77,7 @@ namespace Systems
         {
             UI.AddMoney(cellComponent.Cost);
             UI.IncreaseScore(cellComponent.ScorePoints);
-            UI.IncreaseOccupiedSpace(cellComponent.Weight);
+            UI.OccupiedSpaceBar.IncreaseValue(cellComponent.Weight);
         }
 
         private bool TryDrillByZ(float2 axisValues, ref Translation translation, float drillPower)
@@ -112,7 +112,8 @@ namespace Systems
 
         private bool CheckAbilityToDrillCell(Entity cell, float drillPower)
         {
-            return drillPower >= GetGroundCellComponent(cell).Durability;
+            var cellComponent = GetGroundCellComponent(cell);
+            return drillPower >= cellComponent.Durability && UI.OccupiedSpaceBar.CurrentValue + cellComponent.Weight <= UI.OccupiedSpaceBar.MaxValue;
         }
 
         private void CalculateDrillSpeed(Entity cell, float drillPower)

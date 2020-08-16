@@ -29,7 +29,7 @@ public class MoveSystem : ComponentSystem
             
             if (Math.Abs(horizontalAxisValue) > 0.01f || verticalAxisValue > 0.01f)
             {
-                UI.DecreaseFuel(moveComponent.FuelConsumption);
+                UI.FuelBar.DecreaseValue(moveComponent.FuelConsumption);
             }
             
             velocity.Linear += new float3(horizontalAxisValue * moveComponent.Speed,

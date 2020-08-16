@@ -29,6 +29,10 @@
             <e p="PlayerRendererSystem.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="Bars" t="Include">
+              <e p="Bar.cs" t="Include" />
+              <e p="IBar.cs" t="Include" />
+            </e>
             <e p="UI.cs" t="Include" />
           </e>
         </e>
