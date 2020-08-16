@@ -54,6 +54,7 @@ namespace Systems
                     if (TryDrillByZ(axisValues, ref translation, drill.DrillPower) || TryDrillByX(axisValues, ref translation, drill.DrillPower))
                     {
                         drill.IsDrilling = true;
+                        UI.DecreaseFuel(drill.FuelConsumption);
                     }
                 }
             });
@@ -64,13 +65,19 @@ namespace Systems
             _timeBuffer = 0;
             
             var cellComponent = GetGroundCellComponent(_cellToDrill);
-            UI.AddMoney(cellComponent.Cost);
-            UI.IncreaseScore(cellComponent.ScorePoints);
-            
+            UpdateUI(cellComponent);
+
             World.DefaultGameObjectInjectionWorld.EntityManager.DestroyEntity(_cellToDrill);
             _cellToDrill = Entity.Null;
 
             drill.IsDrilling = false;
+        }
+
+        private void UpdateUI(GroundCellComponent cellComponent)
+        {
+            UI.AddMoney(cellComponent.Cost);
+            UI.IncreaseScore(cellComponent.ScorePoints);
+            UI.IncreaseOccupiedSpace(cellComponent.Weight);
         }
 
         private bool TryDrillByZ(float2 axisValues, ref Translation translation, float drillPower)

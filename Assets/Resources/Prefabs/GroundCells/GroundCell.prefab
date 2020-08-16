@@ -118,8 +118,8 @@ MonoBehaviour:
     y: 0
     z: 0
   m_PrimitiveSize:
-    x: 0.9745625
-    y: 0.9745625
+    x: 0.975
+    y: 0.975
     z: 1
   m_PrimitiveOrientation:
     Value:
@@ -129,11 +129,11 @@ MonoBehaviour:
     RotationOrder: 4
   m_Capsule:
     Height: 1
-    Radius: 0.48728126
+    Radius: 0.4875
     Axis: 2
   m_Cylinder:
     Height: 1
-    Radius: 0.48728126
+    Radius: 0.4875
     Axis: 2
   m_CylinderSideCount: 20
   m_SphereRadius: 0.5

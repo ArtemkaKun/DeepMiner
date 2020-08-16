@@ -27,6 +27,11 @@ public class MoveSystem : ComponentSystem
                 rotation.Value = Quaternion.Euler(0, horizontalAxisValue < 0 ? 180 : 0, 0);
             }
             
+            if (Math.Abs(horizontalAxisValue) > 0.01f || verticalAxisValue > 0.01f)
+            {
+                UI.DecreaseFuel(moveComponent.FuelConsumption);
+            }
+            
             velocity.Linear += new float3(horizontalAxisValue * moveComponent.Speed,
                 verticalAxisValue > 0 ? verticalAxisValue * moveComponent.HorizontalForce : 0, 0) * Time.DeltaTime;
         });
