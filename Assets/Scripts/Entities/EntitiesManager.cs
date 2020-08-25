@@ -13,7 +13,10 @@ namespace Entities
         public static Material CurrentPlayerMaterial;
         public static Material SidePlayerMaterial;
         public static Material FrontPlayerMaterial;
+        public static Mesh quad;
         
+        public static Material ShopButtonMaterial;
+
         private void Awake()
         {
             _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
@@ -23,7 +26,11 @@ namespace Entities
             SidePlayerMaterial = Resources.Load<Material>("Materials/PlayerMaterial");
             FrontPlayerMaterial = Resources.Load<Material>("Materials/PlayerMaterialFront");
             CurrentPlayerMaterial = SidePlayerMaterial;
-
+            
+            quad = GameObject.CreatePrimitive(PrimitiveType.Quad).GetComponent<MeshFilter>().sharedMesh;
+            
+            ShopButtonMaterial = Resources.Load<Material>("Materials/ShopButton");
+            
             CreateGroundCellEntity();
         }
 

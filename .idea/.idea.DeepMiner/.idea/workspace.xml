@@ -21,11 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9ca4d650-b1ad-4fce-a72c-9e9bb4c2fcca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PhysicsCategoryNames.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PhysicsCategoryNames.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/ECSScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/ECSScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,29 +41,32 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/CityTrafficSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/TrafficECS.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarEntity.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PhysicsRestrictsSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarMoveSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/PathNavigationSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/CityManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/CameraFollowSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Bars/Bar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ScriptableObjects/GroundGeneratorData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/StructuresAndDataClasses/NeighborhoodStructuresAndDataClasses/NeighborhoodInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Bars/IBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.physics@0.4.1-preview/Unity.Physics/Dynamics/Simulation/TriggerEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/ShopComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/TrafficECS.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/CityTrafficSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/StructuresAndDataClasses/NeighborhoodStructuresAndDataClasses/NeighborhoodInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarMoveSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/CityManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScriptableObjects/GroundGeneratorData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PhysicsRestrictsSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/CameraFollowSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/PathNavigationSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -77,13 +85,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/CameraFollowSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PhysicsRestrictsSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/PlayerRendererComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/FuelBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/IBar.cs" />
@@ -91,6 +96,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/Bar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/ShopButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/ShopComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" />
       </list>
     </option>
   </component>
@@ -112,15 +123,22 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -150,7 +168,9 @@
       <workItem from="1597079779893" duration="3691000" />
       <workItem from="1597500582140" duration="4543000" />
       <workItem from="1597581429413" duration="1561000" />
-      <workItem from="1597583593014" duration="2382000" />
+      <workItem from="1597583593014" duration="5814000" />
+      <workItem from="1598376178334" duration="60000" />
+      <workItem from="1598376395463" duration="5093000" />
     </task>
     <servers />
   </component>
