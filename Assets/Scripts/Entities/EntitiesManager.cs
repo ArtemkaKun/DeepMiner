@@ -26,8 +26,10 @@ namespace Entities
             SidePlayerMaterial = Resources.Load<Material>("Materials/PlayerMaterial");
             FrontPlayerMaterial = Resources.Load<Material>("Materials/PlayerMaterialFront");
             CurrentPlayerMaterial = SidePlayerMaterial;
-            
-            quad = GameObject.CreatePrimitive(PrimitiveType.Quad).GetComponent<MeshFilter>().sharedMesh;
+
+            var simpleMesh = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            quad = simpleMesh.GetComponent<MeshFilter>().sharedMesh;
+            simpleMesh.transform.position = new Vector3(10, 10, 10);
             
             ShopButtonMaterial = Resources.Load<Material>("Materials/ShopButton");
             

@@ -6,4 +6,6 @@
     void InitBar(float maxValue, float currentValue);
     void IncreaseValue(float amount);
     void DecreaseValue(float amount);
+    void Clean();
+    void Fill();
 }

@@ -34,14 +34,14 @@ namespace Systems
 
         protected override void OnUpdate()
         {
-            Entities.ForEach((ref Translation translation, ref DrillComponent drill) =>
+            Entities.ForEach((ref Translation translation, ref DrillComponent drill, ref PlayerComponent playerComponent) =>
             {
                 if (drill.IsDrilling)
                 {
                     _timeBuffer += Time.DeltaTime;
                     if (_timeBuffer < _drillSpeedInSeconds) return;
                     
-                    CompleteDrillAction(ref drill);
+                    CompleteDrillAction(ref drill, ref playerComponent);
                 }
                 else
                 {
@@ -60,11 +60,14 @@ namespace Systems
             });
         }
 
-        private void CompleteDrillAction(ref DrillComponent drill)
+        private void CompleteDrillAction(ref DrillComponent drill, ref PlayerComponent playerComponent)
         {
             _timeBuffer = 0;
             
             var cellComponent = GetGroundCellComponent(_cellToDrill);
+
+            playerComponent.TempMoney += cellComponent.Cost;
+            
             UpdateUI(cellComponent);
 
             World.DefaultGameObjectInjectionWorld.EntityManager.DestroyEntity(_cellToDrill);
@@ -75,7 +78,6 @@ namespace Systems
 
         private void UpdateUI(GroundCellComponent cellComponent)
         {
-            UI.AddMoney(cellComponent.Cost);
             UI.IncreaseScore(cellComponent.ScorePoints);
             UI.OccupiedSpaceBar.IncreaseValue(cellComponent.Weight);
         }

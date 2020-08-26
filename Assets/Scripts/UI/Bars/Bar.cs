@@ -44,4 +44,16 @@ public class Bar : MonoBehaviour, IBar
         
         bar.value = CurrentValue;
     }
+
+    public void Clean()
+    {
+        CurrentValue = 0;
+        bar.value = CurrentValue;
+    }
+
+    public void Fill()
+    {
+        CurrentValue = MaxValue;
+        bar.value = CurrentValue;
+    }
 }

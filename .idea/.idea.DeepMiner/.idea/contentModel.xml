@@ -12,6 +12,7 @@
             <e p="DrillComponent.cs" t="Include" />
             <e p="GroundCellComponent.cs" t="Include" />
             <e p="MoveComponent.cs" t="Include" />
+            <e p="PlayerComponent.cs" t="Include" />
             <e p="ShopButton.cs" t="Include" />
             <e p="ShopComponent.cs" t="Include" />
           </e>

@@ -86,3 +86,31 @@ public class ShopButtonRender : ComponentSystem
         });
     }
 }
+
+[UpdateAfter(typeof(ShopButtonRender))]
+public class ShopTrading : ComponentSystem
+{
+    protected override void OnUpdate()
+    {
+        Entities.ForEach((ref ShopComponent shopComponent) =>
+        {
+            if (shopComponent.ShowShopButton)
+            {
+                Entities.ForEach((ref PlayerComponent playerComponent) =>
+                {
+                    if(!Input.GetButton("A Button")) return;
+
+                    UI.OccupiedSpaceBar.Clean();
+
+                    var needFuelToHaveMax = 100 - UI.FuelBar.CurrentValue;
+                    var moneyAfterRefuel = playerComponent.TempMoney - needFuelToHaveMax;
+
+                    UI.AddMoney(moneyAfterRefuel > 0 ? moneyAfterRefuel : 0);
+                    UI.FuelBar.IncreaseValue(moneyAfterRefuel > 0 ? needFuelToHaveMax : playerComponent.TempMoney);
+                    
+                    playerComponent.TempMoney = 0f;
+                });
+            }
+        });
+    }
+}

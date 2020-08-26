@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7657378055233842195}
   - component: {fileID: -5166331057621815983}
   - component: {fileID: 9151128422235188667}
+  - component: {fileID: 5616350564644256281}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -272,7 +273,6 @@ MonoBehaviour:
   Speed: 5
   HorizontalForce: 10
   FuelConsumption: 0.025
-  ShowShopButton: 0
 --- !u!114 &-5166331057621815983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
     z: -0
   m_SolverIterationCount: 4
   m_EnableSolverStabilizationHeuristic: 0
-  m_ThreadCountHint: 8
+  m_ThreadCountHint: 16
   m_SynchronizeCollisionWorld: 0
 --- !u!114 &9151128422235188667
 MonoBehaviour:
@@ -309,3 +309,16 @@ MonoBehaviour:
   DrillPower: 20
   FuelConsumption: 2
   IsDrilling: 0
+--- !u!114 &5616350564644256281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206087761067702793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2820c58fc455af045978121cf15c42dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TempMoney: 0
