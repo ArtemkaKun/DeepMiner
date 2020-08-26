@@ -16,7 +16,7 @@ public class MoveSystem : ComponentSystem
     {
         Entities.ForEach((ref MoveComponent moveComponent, ref PhysicsVelocity velocity, ref DrillComponent drill, ref Rotation rotation) =>
         {
-            if (drill.IsDrilling) return;
+            if (drill.IsDrilling || UI.FuelBar.CurrentValue <= 0f) return;
             
             var horizontalAxisValue = Input.GetAxis("Horizontal");
             var verticalAxisValue = Input.GetAxis("Vertical");

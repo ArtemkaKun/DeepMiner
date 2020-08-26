@@ -10,6 +10,7 @@ public class UI : MonoBehaviour
     [SerializeField] private TMP_Text score;
     [SerializeField] private Bar fuelBarRef;
     [SerializeField] private Bar occupiedSpaceBarRef;
+    [SerializeField] private Transform gameOverText;
 
     public static Bar FuelBar;
     public static Bar OccupiedSpaceBar;
@@ -22,6 +23,8 @@ public class UI : MonoBehaviour
     private static Action _updateDepthText;
     private static Action _updateScoreText;
 
+    public static Action onGameOver;
+    
     public static void AddMoney(float amount)
     {
         _moneyValue += amount;
@@ -55,6 +58,8 @@ public class UI : MonoBehaviour
         UpdateMoneyText();
         UpdateDepthText();
         UpdateScoreText();
+
+        onGameOver += TurnOnGameOverText;
     }
 
     private void InitBars()
@@ -68,7 +73,7 @@ public class UI : MonoBehaviour
 
     private void UpdateMoneyText()
     {
-        money.text = _moneyValue.ToString(CultureInfo.InvariantCulture);
+        money.text = _moneyValue.ToString("N");
     }
     
     private void UpdateDepthText()
@@ -79,5 +84,10 @@ public class UI : MonoBehaviour
     private void UpdateScoreText()
     {
         score.text = _scoreValue.ToString();
+    }
+
+    private void TurnOnGameOverText()
+    {
+        gameOverText.gameObject.SetActive(true);
     }
 }

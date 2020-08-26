@@ -23,6 +23,7 @@
             <e p="CameraFollowSystem.cs" t="Include" />
             <e p="DrillSystem.cs" t="Include" />
             <e p="DynamicGroundSpawnSystem.cs" t="Include" />
+            <e p="GameStatusSystem.cs" t="Include" />
             <e p="GroundSpawnSystem" t="Include">
               <e p="GroundCell.cs" t="Include" />
               <e p="GroundSpawnSystem.cs" t="Include" />

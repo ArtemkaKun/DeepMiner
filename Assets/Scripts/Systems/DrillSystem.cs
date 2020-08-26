@@ -36,6 +36,8 @@ namespace Systems
         {
             Entities.ForEach((ref Translation translation, ref DrillComponent drill, ref PlayerComponent playerComponent) =>
             {
+                if (UI.FuelBar.CurrentValue <= 0f) return;
+                
                 if (drill.IsDrilling)
                 {
                     _timeBuffer += Time.DeltaTime;
