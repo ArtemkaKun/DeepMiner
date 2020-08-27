@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Entities.Enums;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
@@ -94,7 +95,7 @@ namespace Systems
             if (_cellToDrill == Entity.Null || !CheckAbilityToDrillCell(_cellToDrill, drillPower)) return false;
 
             AdjustPlayerPosition(_cellToDrill, ref translation);
-            EntitiesManager.CurrentPlayerMaterial = EntitiesManager.FrontPlayerMaterial;
+            GameResources.SwitchCurrentPlayerMaterial(PlayerViewPosition.Front);
             CalculateDrillSpeed(_cellToDrill, drillPower);
             
             return true;

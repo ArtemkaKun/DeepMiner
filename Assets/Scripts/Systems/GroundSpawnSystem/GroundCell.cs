@@ -77,7 +77,7 @@ namespace Systems.GroundSpawnSystem
         private void SpawnCell(string cellName, int i, ref NativeArray<Entity> groundCells)
         {
             _entityManager.DestroyEntity(groundCells[i]);
-            groundCells[i] = _entityManager.Instantiate(EntitiesManager.GetEntity(cellName));
+            groundCells[i] = _entityManager.Instantiate(GameResources.GetGroundCell(cellName));
         }
 
         private float GetRandomFloat()

@@ -80,7 +80,7 @@ public class ShopButtonRender : ComponentSystem
             {
                 Entities.ForEach((ref ShopButton _, ref Translation translation, ref Rotation rotation) =>
                 {
-                    Graphics.DrawMesh(EntitiesManager.quad, translation.Value, rotation.Value, EntitiesManager.ShopButtonMaterial, 1);
+                    Graphics.DrawMesh(GameResources.GetQuadMesh(), translation.Value, rotation.Value, GameResources.GetShopButtonMaterial(), 1);
                 });
             }
         });

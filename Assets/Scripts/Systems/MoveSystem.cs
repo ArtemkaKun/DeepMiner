@@ -1,5 +1,6 @@
 ﻿using Systems;
 using Entities;
+using Entities.Enums;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
@@ -23,7 +24,7 @@ public class MoveSystem : ComponentSystem
         
             if (Math.Abs(horizontalAxisValue) > 0.01f)
             {
-                EntitiesManager.CurrentPlayerMaterial = EntitiesManager.SidePlayerMaterial;
+                GameResources.SwitchCurrentPlayerMaterial(PlayerViewPosition.Side);
                 rotation.Value = Quaternion.Euler(0, horizontalAxisValue < 0 ? 180 : 0, 0);
             }
             
