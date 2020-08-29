@@ -1,5 +1,6 @@
 ﻿using Systems;
 using Entities;
+using Entities.Enums;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
@@ -16,24 +17,24 @@ public class MoveSystem : ComponentSystem
     {
         Entities.ForEach((ref MoveComponent moveComponent, ref PhysicsVelocity velocity, ref DrillComponent drill, ref Rotation rotation) =>
         {
-            if (drill.IsDrilling) return;
+            if (drill.IsDrilling || UI.FuelBar.CurrentValue <= 0f) return;
             
             var horizontalAxisValue = Input.GetAxis("Horizontal");
             var verticalAxisValue = Input.GetAxis("Vertical");
         
             if (Math.Abs(horizontalAxisValue) > 0.01f)
             {
-                EntitiesManager.CurrentPlayerMaterial = EntitiesManager.SidePlayerMaterial;
+                GameResources.SwitchCurrentPlayerMaterial(PlayerViewPosition.Side);
                 rotation.Value = Quaternion.Euler(0, horizontalAxisValue < 0 ? 180 : 0, 0);
             }
             
             if (Math.Abs(horizontalAxisValue) > 0.01f || verticalAxisValue > 0.01f)
             {
-                UI.DecreaseFuel(moveComponent.FuelConsumption);
+                UI.FuelBar.DecreaseValue(moveComponent.FuelConsumption);
             }
             
             velocity.Linear += new float3(horizontalAxisValue * moveComponent.Speed,
-                verticalAxisValue > 0 ? verticalAxisValue * moveComponent.HorizontalForce : 0, 0) * Time.DeltaTime;
+                verticalAxisValue > 0 ? verticalAxisValue * moveComponent.FlySpeed : 0, 0) * Time.DeltaTime;
         });
     }
 }

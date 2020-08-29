@@ -1,5 +1,4 @@
-﻿using System;
-using Systems.GroundSpawnSystem;
+﻿using Systems.GroundSpawnSystem;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -83,18 +82,8 @@ public class GroundSpawnSystem : MonoBehaviour
     private int RotateCellInRandomWay()
     {
         const int rotateStep = 90;
-        var randomInt = new Unity.Mathematics.Random((uint) _randomSeed.Next()).NextUInt(4);
+        var randomInt = new Unity.Mathematics.Random((uint) _randomSeed.Next()).NextInt(4);
 
-        switch (randomInt)
-        {
-            case 1:
-                return rotateStep;
-            case 2:
-                return rotateStep * 2;
-            case 3:
-                return rotateStep * 3;
-            default:
-                return 0;
-        }
+        return rotateStep * randomInt;
     }
 }

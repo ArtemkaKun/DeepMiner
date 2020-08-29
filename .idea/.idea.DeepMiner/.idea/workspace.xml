@@ -20,22 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca4d650-b1ad-4fce-a72c-9e9bb4c2fcca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/PlayerMaterialFront.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/PlayerMaterialFront.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/CoalCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/CoalCell.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/GoldenCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/GoldenCell.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/GroundCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/GroundCell.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/LavaCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/LavaCell.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/SilverCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/SilverCell.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/StoneCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GroundCells/StoneCell.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Componens/ShopComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Componens/ShopComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,27 +41,32 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/CityTrafficSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/TrafficECS.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarEntity.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PhysicsRestrictsSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarMoveSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/PathNavigationSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/CityManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/CameraFollowSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ScriptableObjects/GroundGeneratorData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Bars/Bar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Bars/IBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.physics@0.4.1-preview/Unity.Physics/Dynamics/Simulation/TriggerEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/StructuresAndDataClasses/NeighborhoodStructuresAndDataClasses/NeighborhoodInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CC8EC07-5538-4164-96E5-DB5D391208AC/14/b62a7d11/PrimitiveType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/ShopComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/TrafficECS.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/CityTrafficSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/StructuresAndDataClasses/NeighborhoodStructuresAndDataClasses/NeighborhoodInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/CarMoveSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/City/CityManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScriptableObjects/GroundGeneratorData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PhysicsRestrictsSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/CameraFollowSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/PathNavigationSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -76,7 +76,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/ScriptableObjects/GeneratorData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundLayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" />
         <option value="$PROJECT_DIR$/Assets/ScriptableObjects/GroundGeneratorData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/CameraControlSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/CameraComponent.cs" />
@@ -85,16 +84,32 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/CameraFollowSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PhysicsRestrictsSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/PlayerRendererComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/test.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/FuelBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/ShopButton.cs" />
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.8.4/Editor/Build/DataBuilders/BuildScriptBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/PlayerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GameStatusSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/PlayerResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/GroundEntities.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/ShopResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/Enums/PlayerViewPosition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/EntitiesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/GameResources.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/Bar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/IBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/MoveComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Componens/ShopComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" />
       </list>
     </option>
@@ -117,15 +132,22 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="6504">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="6504" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -155,7 +177,13 @@
       <workItem from="1597079779893" duration="3691000" />
       <workItem from="1597500582140" duration="4543000" />
       <workItem from="1597581429413" duration="1561000" />
-      <workItem from="1597583593014" duration="396000" />
+      <workItem from="1597583593014" duration="5814000" />
+      <workItem from="1598376178334" duration="60000" />
+      <workItem from="1598376395463" duration="5093000" />
+      <workItem from="1598468482503" duration="4106000" />
+      <workItem from="1598472719653" duration="186000" />
+      <workItem from="1598559150579" duration="2683000" />
+      <workItem from="1598721228443" duration="3759000" />
     </task>
     <servers />
   </component>
@@ -177,73 +205,107 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="523" key="GridCell.Tab.0.bottom" timestamp="1596980443631">
+    <state width="2517" height="523" key="GridCell.Tab.0.bottom" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.0.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443631" />
-    <state width="2517" height="523" key="GridCell.Tab.0.center" timestamp="1596980443631">
+    <state width="2517" height="523" key="GridCell.Tab.0.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.0.center" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.0.center/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443631" />
-    <state width="2517" height="523" key="GridCell.Tab.0.left" timestamp="1596980443631">
+    <state width="2517" height="523" key="GridCell.Tab.0.center/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.0.left" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.0.left/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443631" />
-    <state width="2517" height="523" key="GridCell.Tab.0.right" timestamp="1596980443631">
+    <state width="2517" height="523" key="GridCell.Tab.0.left/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.0.right" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.0.right/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443631" />
-    <state width="2517" height="523" key="GridCell.Tab.1.bottom" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.0.right/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.1.bottom" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.1.center" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.1.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.1.center" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.center/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.1.left" timestamp="1596980443631">
+    <state width="2517" height="523" key="GridCell.Tab.1.center/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.1.left" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.left/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443631" />
-    <state width="2517" height="523" key="GridCell.Tab.1.right" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.1.left/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.1.right" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.right/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.2.bottom" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.1.right/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.2.bottom" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.2.center" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.2.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.2.center" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.center/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.2.left" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.2.center/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.2.left" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.left/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.2.right" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.2.left/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.2.right" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.right/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.3.bottom" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.2.right/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.3.bottom" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.3.center" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.3.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.3.center" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.center/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.3.left" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.3.center/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.3.left" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.left/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state width="2517" height="523" key="GridCell.Tab.3.right" timestamp="1596980443632">
+    <state width="2517" height="523" key="GridCell.Tab.3.left/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state width="2517" height="523" key="GridCell.Tab.3.right" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.right/0.0.2560.1409@0.0.2560.1409" timestamp="1596980443632" />
-    <state x="1124" y="388" key="RiderGenerateDialog" timestamp="1596977935171">
+    <state width="2517" height="523" key="GridCell.Tab.3.right/0.0.2560.1409@0.0.2560.1409" timestamp="1598725024010" />
+    <state x="1124" y="388" key="RiderGenerateDialog" timestamp="1598560607325">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state x="1124" y="388" key="RiderGenerateDialog/0.0.2560.1409@0.0.2560.1409" timestamp="1596977935171" />
+    <state x="1124" y="388" key="RiderGenerateDialog/0.0.2560.1409@0.0.2560.1409" timestamp="1598560607325" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs</url>
+          <line>54</line>
+          <properties documentPath="C:\Projects\DeepMiner\Assets\Scripts\Systems\DrillSystem.cs" initialLine="54">
+            <startOffsets>
+              <option value="1570" />
+              <option value="1666" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1665" />
+              <option value="1673" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs</url>
+          <line>94</line>
+          <properties documentPath="C:\Projects\DeepMiner\Assets\Scripts\Systems\DrillSystem.cs" initialLine="94">
+            <startOffsets>
+              <option value="3074" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3122" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,29 +1,32 @@
 ﻿using System;
-using System.Globalization;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
     [SerializeField] private TMP_Text money;
     [SerializeField] private TMP_Text depth;
     [SerializeField] private TMP_Text score;
-    [SerializeField] private Slider fuelBar;
-    [SerializeField] private Slider occupiedSpaceBar;
+    [SerializeField] private Bar fuelBarObject;
+    [SerializeField] private Bar storageBarObject;
+    [SerializeField] private Transform gameOverText;
     
+    public static IBar FuelBar { get; private set; }
+    public static IBar StorageBar { get; private set; }
+
+    public static Action onGameOver;
+
+    private static readonly (int MaxValue, int Value) StartFuelBarValues = (100, 100);
+    private static readonly (int MaxValue, int Value) StartStorageBarValues = (200, 0);
+
     private static float _moneyValue;
-    private static float _fuelBarValue;
-    private static float _occupiedSpaceBarValue;
     private static int _depthValue;
     private static int _scoreValue;
 
     private static Action _updateMoneyText;
     private static Action _updateDepthText;
     private static Action _updateScoreText;
-    private static Action _updateFuelBar;
-    private static Action _updateOccupiedSpaceBar;
-    
+
     public static void AddMoney(float amount)
     {
         _moneyValue += amount;
@@ -42,42 +45,45 @@ public class UI : MonoBehaviour
         _updateScoreText.Invoke();
     }
 
-    public static void DecreaseFuel(float amount)
+    private void Awake()
     {
-        _fuelBarValue -= amount;
-        _updateFuelBar.Invoke();
+        InitTextValues();
+        InitBars();
+        InitUIActions();
     }
 
-    public static void IncreaseOccupiedSpace(float amount)
-    {
-        _occupiedSpaceBarValue += amount;
-        _updateOccupiedSpaceBar.Invoke();
-    }
-    
-    private void Awake()
+    private void InitTextValues()
     {
         _moneyValue = 0;
         _depthValue = 0;
         _scoreValue = 0;
-        _occupiedSpaceBarValue = 0;
-        _fuelBarValue = 100;
-        
-        _updateMoneyText += UpdateMoneyText;
-        _updateDepthText += UpdateDepthText;
-        _updateScoreText += UpdateScoreText;
-        _updateFuelBar += UpdateFuelBar;
-        _updateOccupiedSpaceBar += UpdateOccupiedSpaceBar;
         
         UpdateMoneyText();
         UpdateDepthText();
         UpdateScoreText();
-        UpdateFuelBar();
-        UpdateOccupiedSpaceBar();
+    }
+
+    private void InitBars()
+    {
+        FuelBar = fuelBarObject;
+        StorageBar = storageBarObject;
+
+        FuelBar.InitBar(StartFuelBarValues.MaxValue, StartFuelBarValues.Value);
+        StorageBar.InitBar(StartStorageBarValues.MaxValue, StartStorageBarValues.Value);
+    }
+
+    private void InitUIActions()
+    {
+        _updateMoneyText += UpdateMoneyText;
+        _updateDepthText += UpdateDepthText;
+        _updateScoreText += UpdateScoreText;
+
+        onGameOver += TurnOnGameOverText;
     }
 
     private void UpdateMoneyText()
     {
-        money.text = _moneyValue.ToString(CultureInfo.InvariantCulture);
+        money.text = _moneyValue.ToString("N");
     }
     
     private void UpdateDepthText()
@@ -90,13 +96,8 @@ public class UI : MonoBehaviour
         score.text = _scoreValue.ToString();
     }
 
-    private void UpdateFuelBar()
+    private void TurnOnGameOverText()
     {
-        fuelBar.value = _fuelBarValue;
-    }
-
-    private void UpdateOccupiedSpaceBar()
-    {
-        occupiedSpaceBar.value = _occupiedSpaceBarValue;
+        gameOverText.gameObject.SetActive(true);
     }
 }

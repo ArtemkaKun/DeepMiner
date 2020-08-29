@@ -7,13 +7,11 @@ namespace Systems.GroundSpawnSystem
 {
     public class GroundCell
     {
-        private EntityManager _entityManager;
         private readonly GroundGeneratorData _groundGeneratorData;
         private readonly Random _randomSeed;
 
         public GroundCell(GroundGeneratorData groundGeneratorData)
         {
-            _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
             _groundGeneratorData = groundGeneratorData;
             _randomSeed = new Random();
         }
@@ -54,7 +52,8 @@ namespace Systems.GroundSpawnSystem
         {
             var randomFloat = GetRandomFloat();
             
-            string cellName;
+            var cellName = "";
+            
             switch(randomFloat)
             {
                 case var _ when randomFloat <= _groundGeneratorData.spawnGoldenCellChance && ySpawnOffset <= _groundGeneratorData.startLayerForGoldenCells:
@@ -66,9 +65,6 @@ namespace Systems.GroundSpawnSystem
                 case var _ when randomFloat <= _groundGeneratorData.spawnCoalCellChance && ySpawnOffset <= _groundGeneratorData.startLayerForCoalCells:
                     cellName = "CoalCell";
                     break;
-                default:
-                    cellName = "";
-                    break;
             }
             
             return cellName;
@@ -76,8 +72,9 @@ namespace Systems.GroundSpawnSystem
 
         private void SpawnCell(string cellName, int i, ref NativeArray<Entity> groundCells)
         {
-            _entityManager.DestroyEntity(groundCells[i]);
-            groundCells[i] = _entityManager.Instantiate(EntitiesManager.GetEntity(cellName));
+            var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+            entityManager.DestroyEntity(groundCells[i]);
+            groundCells[i] = entityManager.Instantiate(GameResources.GetGroundCell(cellName));
         }
 
         private float GetRandomFloat()

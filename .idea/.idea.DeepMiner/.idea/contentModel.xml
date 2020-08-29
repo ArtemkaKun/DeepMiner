@@ -12,14 +12,26 @@
             <e p="DrillComponent.cs" t="Include" />
             <e p="GroundCellComponent.cs" t="Include" />
             <e p="MoveComponent.cs" t="Include" />
+            <e p="PlayerComponent.cs" t="Include" />
+            <e p="ShopButton.cs" t="Include" />
+            <e p="ShopComponent.cs" t="Include" />
           </e>
-          <e p="Entities" t="Include">
-            <e p="EntitiesManager.cs" t="Include" />
+          <e p="GameResources" t="Include">
+            <e p="Enums" t="Include">
+              <e p="PlayerViewPosition.cs" t="Include" />
+            </e>
+            <e p="GameResources.cs" t="Include" />
+            <e p="Structures" t="Include">
+              <e p="GroundEntities.cs" t="Include" />
+              <e p="PlayerResources.cs" t="Include" />
+              <e p="ShopResources.cs" t="Include" />
+            </e>
           </e>
           <e p="Systems" t="Include">
             <e p="CameraFollowSystem.cs" t="Include" />
             <e p="DrillSystem.cs" t="Include" />
             <e p="DynamicGroundSpawnSystem.cs" t="Include" />
+            <e p="GameStatusSystem.cs" t="Include" />
             <e p="GroundSpawnSystem" t="Include">
               <e p="GroundCell.cs" t="Include" />
               <e p="GroundSpawnSystem.cs" t="Include" />
@@ -27,8 +39,13 @@
             <e p="MoveSystem.cs" t="Include" />
             <e p="PhysicsRestrictsSystem.cs" t="Include" />
             <e p="PlayerRendererSystem.cs" t="Include" />
+            <e p="ShopSystem.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="Bars" t="Include">
+              <e p="Bar.cs" t="Include" />
+              <e p="IBar.cs" t="Include" />
+            </e>
             <e p="UI.cs" t="Include" />
           </e>
         </e>
@@ -69,7 +86,7 @@
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Admin\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Admin\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_DeepMiner.467939201.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Admin\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Admin\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_DeepMiner.467939201.00" t="ExcludeRecursive" />
   </component>
 </project>
