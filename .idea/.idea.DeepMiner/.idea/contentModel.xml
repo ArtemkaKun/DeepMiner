@@ -16,17 +16,15 @@
             <e p="ShopButton.cs" t="Include" />
             <e p="ShopComponent.cs" t="Include" />
           </e>
-          <e p="Entities" t="Include">
-            <e p="EntitiesManager" t="Include">
-              <e p="Enums" t="Include">
-                <e p="PlayerViewPosition.cs" t="Include" />
-              </e>
-              <e p="GameResources.cs" t="Include" />
-              <e p="Structures" t="Include">
-                <e p="GroundEntities.cs" t="Include" />
-                <e p="PlayerResources.cs" t="Include" />
-                <e p="ShopResources.cs" t="Include" />
-              </e>
+          <e p="GameResources" t="Include">
+            <e p="Enums" t="Include">
+              <e p="PlayerViewPosition.cs" t="Include" />
+            </e>
+            <e p="GameResources.cs" t="Include" />
+            <e p="Structures" t="Include">
+              <e p="GroundEntities.cs" t="Include" />
+              <e p="PlayerResources.cs" t="Include" />
+              <e p="ShopResources.cs" t="Include" />
             </e>
           </e>
           <e p="Systems" t="Include">

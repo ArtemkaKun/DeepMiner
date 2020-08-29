@@ -271,8 +271,8 @@ MonoBehaviour:
   money: {fileID: 1626530451}
   depth: {fileID: 1970720847}
   score: {fileID: 782665075}
-  fuelBarRef: {fileID: 1805453405}
-  occupiedSpaceBarRef: {fileID: 390592091}
+  fuelBarObject: {fileID: 1805453405}
+  storageBarObject: {fileID: 390592091}
   gameOverText: {fileID: 1910129382}
 --- !u!1 &220849876
 GameObject:
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 390592090}
   - component: {fileID: 390592091}
   m_Layer: 5
-  m_Name: occupiedSpaceBar
+  m_Name: storageBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

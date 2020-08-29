@@ -7,5 +7,4 @@
     void IncreaseValue(float amount);
     void DecreaseValue(float amount);
     void Clean();
-    void Fill();
 }

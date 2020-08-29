@@ -100,7 +100,7 @@ public class ShopTrading : ComponentSystem
                 {
                     if(!Input.GetButton("A Button")) return;
 
-                    UI.OccupiedSpaceBar.Clean();
+                    UI.StorageBar.Clean();
 
                     var needFuelToHaveMax = 100 - UI.FuelBar.CurrentValue;
                     var moneyAfterRefuel = playerComponent.TempMoney - needFuelToHaveMax;

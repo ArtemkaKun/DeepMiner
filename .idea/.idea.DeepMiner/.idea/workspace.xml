@@ -20,18 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca4d650-b1ad-4fce-a72c-9e9bb4c2fcca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/Enums/PlayerViewPosition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/Enums/PlayerViewPosition.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/GameResources.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/GameResources.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Bars/Bar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Bars/Bar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Bars/IBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Bars/IBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +57,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/CameraFollowSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI-BIMS/Assets/_AIBIMS/Scripts/CarTraffic/Car/PathNavigationSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/GameResources.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundCell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/DrillComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Componens/GroundCellComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -98,10 +92,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/ShopComponent.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.8.4/Editor/Build/DataBuilders/BuildScriptBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Componens/PlayerComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/IBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/Bar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GameStatusSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/PlayerResources.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/GroundEntities.cs" />
@@ -113,6 +104,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerRendererSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/EntitiesManager/GameResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/Bar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Bars/IBar.cs" />
       </list>
     </option>
   </component>
@@ -185,6 +179,7 @@
       <workItem from="1598468482503" duration="4106000" />
       <workItem from="1598472719653" duration="186000" />
       <workItem from="1598559150579" duration="2683000" />
+      <workItem from="1598721228443" duration="944000" />
     </task>
     <servers />
   </component>

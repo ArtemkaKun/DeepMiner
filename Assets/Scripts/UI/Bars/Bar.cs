@@ -5,55 +5,28 @@ public class Bar : MonoBehaviour, IBar
 {
     [SerializeField] private Slider bar;
     
-    public float MaxValue { get; private set; }
-    public float CurrentValue { get; private set; }
+    public float MaxValue => bar.maxValue;
+
+    public float CurrentValue => bar.value;
 
     public void InitBar(float maxValue, float currentValue)
     {
-        MaxValue = maxValue;
-        CurrentValue = currentValue;
-
         bar.maxValue = maxValue;
         bar.value = currentValue;
     }
 
     public void IncreaseValue(float amount)
     {
-        if (CurrentValue + amount >= MaxValue)
-        {
-            CurrentValue = MaxValue;
-        }
-        else
-        {
-            CurrentValue += amount;
-        }
-
-        bar.value = CurrentValue;
+        bar.value += amount;
     }
 
     public void DecreaseValue(float amount)
     {
-        if (CurrentValue - amount <= 0)
-        {
-            CurrentValue = 0;
-        }
-        else
-        {
-            CurrentValue -= amount;
-        }
-        
-        bar.value = CurrentValue;
+        bar.value -= amount;
     }
 
     public void Clean()
     {
-        CurrentValue = 0;
-        bar.value = CurrentValue;
-    }
-
-    public void Fill()
-    {
-        CurrentValue = MaxValue;
-        bar.value = CurrentValue;
+        bar.value = 0;
     }
 }

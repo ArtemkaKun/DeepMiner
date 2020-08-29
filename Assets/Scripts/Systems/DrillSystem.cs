@@ -82,7 +82,7 @@ namespace Systems
         private void UpdateUI(GroundCellComponent cellComponent)
         {
             UI.IncreaseScore(cellComponent.ScorePoints);
-            UI.OccupiedSpaceBar.IncreaseValue(cellComponent.Weight);
+            UI.StorageBar.IncreaseValue(cellComponent.Weight);
         }
 
         private bool TryDrillByZ(float2 axisValues, ref Translation translation, float drillPower)
@@ -118,7 +118,7 @@ namespace Systems
         private bool CheckAbilityToDrillCell(Entity cell, float drillPower)
         {
             var cellComponent = GetGroundCellComponent(cell);
-            return drillPower >= cellComponent.Durability && UI.OccupiedSpaceBar.CurrentValue + cellComponent.Weight <= UI.OccupiedSpaceBar.MaxValue;
+            return drillPower >= cellComponent.Durability && UI.StorageBar.CurrentValue + cellComponent.Weight <= UI.StorageBar.MaxValue;
         }
 
         private void CalculateDrillSpeed(Entity cell, float drillPower)

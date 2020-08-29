@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using TMPro;
 using UnityEngine;
 
@@ -8,13 +7,18 @@ public class UI : MonoBehaviour
     [SerializeField] private TMP_Text money;
     [SerializeField] private TMP_Text depth;
     [SerializeField] private TMP_Text score;
-    [SerializeField] private Bar fuelBarRef;
-    [SerializeField] private Bar occupiedSpaceBarRef;
+    [SerializeField] private Bar fuelBarObject;
+    [SerializeField] private Bar storageBarObject;
     [SerializeField] private Transform gameOverText;
-
-    public static Bar FuelBar;
-    public static Bar OccupiedSpaceBar;
     
+    public static IBar FuelBar { get; private set; }
+    public static IBar StorageBar { get; private set; }
+
+    public static Action onGameOver;
+
+    private static readonly (int MaxValue, int Value) StartFuelBarValues = (100, 100);
+    private static readonly (int MaxValue, int Value) StartStorageBarValues = (200, 0);
+
     private static float _moneyValue;
     private static int _depthValue;
     private static int _scoreValue;
@@ -23,8 +27,6 @@ public class UI : MonoBehaviour
     private static Action _updateDepthText;
     private static Action _updateScoreText;
 
-    public static Action onGameOver;
-    
     public static void AddMoney(float amount)
     {
         _moneyValue += amount;
@@ -45,30 +47,38 @@ public class UI : MonoBehaviour
 
     private void Awake()
     {
+        InitTextValues();
+        InitBars();
+        InitUIActions();
+    }
+
+    private void InitTextValues()
+    {
         _moneyValue = 0;
         _depthValue = 0;
         _scoreValue = 0;
-
-        InitBars();
-
-        _updateMoneyText += UpdateMoneyText;
-        _updateDepthText += UpdateDepthText;
-        _updateScoreText += UpdateScoreText;
-
+        
         UpdateMoneyText();
         UpdateDepthText();
         UpdateScoreText();
-
-        onGameOver += TurnOnGameOverText;
     }
 
     private void InitBars()
     {
-        FuelBar = fuelBarRef;
-        OccupiedSpaceBar = occupiedSpaceBarRef;
+        FuelBar = fuelBarObject;
+        StorageBar = storageBarObject;
 
-        FuelBar.InitBar(100, 100);
-        OccupiedSpaceBar.InitBar(200, 0);
+        FuelBar.InitBar(StartFuelBarValues.MaxValue, StartFuelBarValues.Value);
+        StorageBar.InitBar(StartStorageBarValues.MaxValue, StartStorageBarValues.Value);
+    }
+
+    private void InitUIActions()
+    {
+        _updateMoneyText += UpdateMoneyText;
+        _updateDepthText += UpdateDepthText;
+        _updateScoreText += UpdateScoreText;
+
+        onGameOver += TurnOnGameOverText;
     }
 
     private void UpdateMoneyText()
