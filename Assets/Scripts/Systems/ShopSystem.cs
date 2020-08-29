@@ -14,7 +14,7 @@ public class ShopSystemButton : ComponentSystem
     {
         Entities.ForEach((ref ShopComponent shopComponent) =>
         {
-            shopComponent.ShowShopButton = false;
+            shopComponent.ShowingShopButton = false;
         });
     }
 }
@@ -62,7 +62,7 @@ public class ShopSystem : JobComponentSystem
                 var shop = entityAIsShop ? entityA : entityB;
                 
                 var shopComponent = ShopComponentGroup[shop];
-                shopComponent.ShowShopButton = true;
+                shopComponent.ShowingShopButton = true;
                 ShopComponentGroup[shop] = shopComponent;
             }
         }
@@ -76,7 +76,7 @@ public class ShopButtonRender : ComponentSystem
     {
         Entities.ForEach((ref ShopComponent shopComponent) =>
         {
-            if (shopComponent.ShowShopButton)
+            if (shopComponent.ShowingShopButton)
             {
                 Entities.ForEach((ref ShopButton _, ref Translation translation, ref Rotation rotation) =>
                 {
@@ -94,7 +94,7 @@ public class ShopTrading : ComponentSystem
     {
         Entities.ForEach((ref ShopComponent shopComponent) =>
         {
-            if (shopComponent.ShowShopButton)
+            if (shopComponent.ShowingShopButton)
             {
                 Entities.ForEach((ref PlayerComponent playerComponent) =>
                 {

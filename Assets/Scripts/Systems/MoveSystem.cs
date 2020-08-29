@@ -34,7 +34,7 @@ public class MoveSystem : ComponentSystem
             }
             
             velocity.Linear += new float3(horizontalAxisValue * moveComponent.Speed,
-                verticalAxisValue > 0 ? verticalAxisValue * moveComponent.HorizontalForce : 0, 0) * Time.DeltaTime;
+                verticalAxisValue > 0 ? verticalAxisValue * moveComponent.FlySpeed : 0, 0) * Time.DeltaTime;
         });
     }
 }

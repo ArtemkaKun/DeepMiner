@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  HorizontalForce: 10
+  FlySpeed: 10
   FuelConsumption: 0.035
 --- !u!114 &-5166331057621815983
 MonoBehaviour:

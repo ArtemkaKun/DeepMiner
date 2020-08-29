@@ -3,5 +3,5 @@
 [GenerateAuthoringComponent]
 public struct ShopComponent : IComponentData
 {
-    public bool ShowShopButton;
+    public bool ShowingShopButton;
 }
