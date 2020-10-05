@@ -9,9 +9,9 @@ namespace Systems
         {
             Entities.ForEach((ref PlayerComponent _) =>
             {
-                if (UI.FuelBar.CurrentValue <= 0f)
+                if (GameUI.FuelBar.CurrentValue <= 0f)
                 {
-                    UI.onGameOver.Invoke();
+                    GameUI.onGameOver.Invoke();
                 }
             });
         }

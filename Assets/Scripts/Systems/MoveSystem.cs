@@ -17,7 +17,7 @@ public class MoveSystem : ComponentSystem
     {
         Entities.ForEach((ref MoveComponent moveComponent, ref PhysicsVelocity velocity, ref DrillComponent drill, ref Rotation rotation) =>
         {
-            if (drill.IsDrilling || UI.FuelBar.CurrentValue <= 0f) return;
+            if (drill.IsDrilling || GameUI.FuelBar.CurrentValue <= 0f) return;
             
             var horizontalAxisValue = Input.GetAxis("Horizontal");
             var verticalAxisValue = Input.GetAxis("Vertical");
@@ -30,7 +30,7 @@ public class MoveSystem : ComponentSystem
             
             if (Math.Abs(horizontalAxisValue) > 0.01f || verticalAxisValue > 0.01f)
             {
-                UI.FuelBar.DecreaseValue(moveComponent.FuelConsumption);
+                GameUI.FuelBar.DecreaseValue(moveComponent.FuelConsumption);
             }
             
             velocity.Linear += new float3(horizontalAxisValue * moveComponent.Speed,

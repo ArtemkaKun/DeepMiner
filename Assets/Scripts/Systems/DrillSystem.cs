@@ -38,7 +38,7 @@ namespace Systems
             Entities.ForEach((ref Translation translation, ref DrillComponent drill,
                 ref PlayerComponent playerComponent) =>
             {
-                if (UI.FuelBar.CurrentValue <= 0f) return;
+                if (GameUI.FuelBar.CurrentValue <= 0f) return;
 
                 if (drill.IsDrilling)
                 {
@@ -58,7 +58,7 @@ namespace Systems
                         !TryDrillByX(axisValues, ref translation, drill.DrillPower)) return;
 
                     drill.IsDrilling = true;
-                    UI.FuelBar.DecreaseValue(drill.FuelConsumption);
+                    GameUI.FuelBar.DecreaseValue(drill.FuelConsumption);
                 }
             });
         }
@@ -86,8 +86,8 @@ namespace Systems
 
         private void UpdateUI(GroundCellComponent cellComponent)
         {
-            UI.IncreaseScore(cellComponent.ScorePoints);
-            UI.StorageBar.IncreaseValue(cellComponent.Weight);
+            GameUI.IncreaseScore(cellComponent.ScorePoints);
+            GameUI.StorageBar.IncreaseValue(cellComponent.Weight);
         }
 
         private bool TryDrillByZ((float HorizontalAxis, float VerticalAxis) axisValues, ref Translation translation, float drillPower)
@@ -124,7 +124,7 @@ namespace Systems
         {
             var cellComponent = GetGroundCellComponent(cell);
             return drillPower >= cellComponent.Durability &&
-                   UI.StorageBar.CurrentValue + cellComponent.Weight <= UI.StorageBar.MaxValue;
+                   GameUI.StorageBar.CurrentValue + cellComponent.Weight <= GameUI.StorageBar.MaxValue;
         }
 
         private void CalculateDrillSpeed(Entity cell, float drillPower)

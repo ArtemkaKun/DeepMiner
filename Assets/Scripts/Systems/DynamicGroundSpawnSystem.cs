@@ -12,8 +12,12 @@ public class DynamicGroundSpawnSystem : ComponentSystem
     protected override void OnStartRunning()
     {
         base.OnStartRunning();
+
+        var gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
+
+        if (gameManagerObject == null) return;
         
-        _groundSpawner = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GroundSpawnSystem>();
+        _groundSpawner = gameManagerObject.GetComponent<GroundSpawnSystem>();
     }
     
     protected override void OnUpdate()
@@ -22,7 +26,7 @@ public class DynamicGroundSpawnSystem : ComponentSystem
         {
             if (translation.Value.y > _groundSpawner.YSpawnOffset + SpawnNewLayerOffset) return;
             
-            UI.IncreaseDepth();
+            GameUI.IncreaseDepth();
             _groundSpawner.SpawnGround();
         });
     }

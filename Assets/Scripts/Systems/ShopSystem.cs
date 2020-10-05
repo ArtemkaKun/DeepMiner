@@ -100,13 +100,13 @@ public class ShopTrading : ComponentSystem
                 {
                     if(!Input.GetButton("A Button")) return;
 
-                    UI.StorageBar.Clean();
+                    GameUI.StorageBar.Clean();
 
-                    var needFuelToHaveMax = 100 - UI.FuelBar.CurrentValue;
+                    var needFuelToHaveMax = 100 - GameUI.FuelBar.CurrentValue;
                     var moneyAfterRefuel = playerComponent.TempMoney - needFuelToHaveMax;
 
-                    UI.AddMoney(moneyAfterRefuel > 0 ? moneyAfterRefuel : 0);
-                    UI.FuelBar.IncreaseValue(moneyAfterRefuel > 0 ? needFuelToHaveMax : playerComponent.TempMoney);
+                    GameUI.AddMoney(moneyAfterRefuel > 0 ? moneyAfterRefuel : 0);
+                    GameUI.FuelBar.IncreaseValue(moneyAfterRefuel > 0 ? needFuelToHaveMax : playerComponent.TempMoney);
                     
                     playerComponent.TempMoney = 0f;
                 });
