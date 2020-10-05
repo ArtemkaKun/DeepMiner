@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
-    [SerializeField] private TMP_Text money;
-    [SerializeField] private TMP_Text depth;
-    [SerializeField] private TMP_Text score;
-    [SerializeField] private Bar fuelBarObject;
-    [SerializeField] private Bar storageBarObject;
-    [SerializeField] private Transform gameOverText;
-    
-    public static IBar FuelBar { get; private set; }
-    public static IBar StorageBar { get; private set; }
-
     public static Action onGameOver;
 
     private static readonly (int MaxValue, int Value) StartFuelBarValues = (100, 100);
@@ -26,6 +16,22 @@ public class GameUI : MonoBehaviour
     private static Action _updateMoneyText;
     private static Action _updateDepthText;
     private static Action _updateScoreText;
+    [SerializeField] private TMP_Text money;
+    [SerializeField] private TMP_Text depth;
+    [SerializeField] private TMP_Text score;
+    [SerializeField] private Bar fuelBarObject;
+    [SerializeField] private Bar storageBarObject;
+    [SerializeField] private Transform gameOverText;
+
+    public static IBar FuelBar { get; private set; }
+    public static IBar StorageBar { get; private set; }
+
+    private void Awake()
+    {
+        InitTextValues();
+        InitBars();
+        InitUIActions();
+    }
 
     public static void AddMoney(float amount)
     {
@@ -45,19 +51,12 @@ public class GameUI : MonoBehaviour
         _updateScoreText.Invoke();
     }
 
-    private void Awake()
-    {
-        InitTextValues();
-        InitBars();
-        InitUIActions();
-    }
-
     private void InitTextValues()
     {
         _moneyValue = 0;
         _depthValue = 0;
         _scoreValue = 0;
-        
+
         UpdateMoneyText();
         UpdateDepthText();
         UpdateScoreText();
@@ -85,12 +84,12 @@ public class GameUI : MonoBehaviour
     {
         money.text = _moneyValue.ToString("N");
     }
-    
+
     private void UpdateDepthText()
     {
         depth.text = _depthValue.ToString();
     }
-    
+
     private void UpdateScoreText()
     {
         score.text = _scoreValue.ToString();

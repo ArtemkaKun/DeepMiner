@@ -10,7 +10,8 @@ public class PlayerRendererSystem : ComponentSystem
     {
         Entities.ForEach((ref MoveComponent _, ref Translation translation, ref Rotation rotation) =>
         {
-            Graphics.DrawMesh(GameResources.GetQuadMesh(), translation.Value, rotation.Value, GameResources.GetCurrentPlayerMaterial(), 1);
+            Graphics.DrawMesh(GameResources.GetQuadMesh(), translation.Value, rotation.Value,
+                GameResources.GetCurrentPlayerMaterial(), 1);
         });
     }
 }

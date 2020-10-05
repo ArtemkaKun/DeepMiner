@@ -12,10 +12,7 @@ public class ShopSystemButton : ComponentSystem
 {
     protected override void OnUpdate()
     {
-        Entities.ForEach((ref ShopComponent shopComponent) =>
-        {
-            shopComponent.ShowingShopButton = false;
-        });
+        Entities.ForEach((ref ShopComponent shopComponent) => { shopComponent.ShowingShopButton = false; });
     }
 }
 
@@ -43,12 +40,12 @@ public class ShopSystem : JobComponentSystem
 
         return triggerJob;
     }
-    
+
     [BurstCompile]
     private struct ShopTriggerJob : ITriggerEventsJob
     {
         public ComponentDataFromEntity<ShopComponent> ShopComponentGroup;
-        
+
         public void Execute(TriggerEvent triggerEvent)
         {
             var entityA = triggerEvent.EntityA;
@@ -60,7 +57,7 @@ public class ShopSystem : JobComponentSystem
             if (entityAIsShop || entityBIsShop)
             {
                 var shop = entityAIsShop ? entityA : entityB;
-                
+
                 var shopComponent = ShopComponentGroup[shop];
                 shopComponent.ShowingShopButton = true;
                 ShopComponentGroup[shop] = shopComponent;
@@ -77,12 +74,11 @@ public class ShopButtonRender : ComponentSystem
         Entities.ForEach((ref ShopComponent shopComponent) =>
         {
             if (shopComponent.ShowingShopButton)
-            {
                 Entities.ForEach((ref ShopButton _, ref Translation translation, ref Rotation rotation) =>
                 {
-                    Graphics.DrawMesh(GameResources.GetQuadMesh(), translation.Value, rotation.Value, GameResources.GetShopButtonMaterial(), 1);
+                    Graphics.DrawMesh(GameResources.GetQuadMesh(), translation.Value, rotation.Value,
+                        GameResources.GetShopButtonMaterial(), 1);
                 });
-            }
         });
     }
 }
@@ -95,10 +91,9 @@ public class ShopTrading : ComponentSystem
         Entities.ForEach((ref ShopComponent shopComponent) =>
         {
             if (shopComponent.ShowingShopButton)
-            {
                 Entities.ForEach((ref PlayerComponent playerComponent) =>
                 {
-                    if(!Input.GetButton("A Button")) return;
+                    if (!Input.GetButton("A Button")) return;
 
                     GameUI.StorageBar.Clean();
 
@@ -107,10 +102,9 @@ public class ShopTrading : ComponentSystem
 
                     GameUI.AddMoney(moneyAfterRefuel > 0 ? moneyAfterRefuel : 0);
                     GameUI.FuelBar.IncreaseValue(moneyAfterRefuel > 0 ? needFuelToHaveMax : playerComponent.TempMoney);
-                    
+
                     playerComponent.TempMoney = 0f;
                 });
-            }
         });
     }
 }

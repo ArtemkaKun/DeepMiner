@@ -6,9 +6,6 @@ public class PhysicsRestrictsSystem : ComponentSystem
 {
     protected override void OnUpdate()
     {
-        Entities.ForEach((ref MoveComponent _, ref PhysicsMass mass) =>
-        {
-            mass.InverseInertia = new float3(0);
-        });
+        Entities.ForEach((ref MoveComponent _, ref PhysicsMass mass) => { mass.InverseInertia = new float3(0); });
     }
 }

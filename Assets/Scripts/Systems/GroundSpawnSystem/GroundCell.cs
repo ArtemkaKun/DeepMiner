@@ -1,7 +1,7 @@
-﻿using Entities;
+﻿using System;
+using Entities;
 using Unity.Collections;
 using Unity.Entities;
-using Random = System.Random;
 
 namespace Systems.GroundSpawnSystem
 {
@@ -20,15 +20,18 @@ namespace Systems.GroundSpawnSystem
         {
             var randomFloat = GetRandomFloat();
             string cellName;
-            
-            switch(randomFloat)
+
+            switch (randomFloat)
             {
-                case var _ when ySpawnOffset <= _groundGeneratorData.startLayerForEmptyCells && randomFloat <= _groundGeneratorData.spawnEmptyCellChance:
+                case var _ when ySpawnOffset <= _groundGeneratorData.startLayerForEmptyCells &&
+                                randomFloat <= _groundGeneratorData.spawnEmptyCellChance:
                     return false;
-                case var _ when ySpawnOffset <= _groundGeneratorData.startLayerForLavaCells && randomFloat <= _groundGeneratorData.spawnLavaCellChance:
+                case var _ when ySpawnOffset <= _groundGeneratorData.startLayerForLavaCells &&
+                                randomFloat <= _groundGeneratorData.spawnLavaCellChance:
                     cellName = "LavaCell";
                     break;
-                case var _ when ySpawnOffset <= _groundGeneratorData.startLayerForStonesCells && randomFloat <= _groundGeneratorData.spawnStoneCellChance:
+                case var _ when ySpawnOffset <= _groundGeneratorData.startLayerForStonesCells &&
+                                randomFloat <= _groundGeneratorData.spawnStoneCellChance:
                     cellName = "StoneCell";
                     break;
                 default:
@@ -37,13 +40,9 @@ namespace Systems.GroundSpawnSystem
             }
 
             if (cellName != "")
-            {
                 SpawnCell(cellName, i, ref groundCells);
-            }
             else
-            {
                 SpawnCell("GroundCell", i, ref groundCells);
-            }
 
             return true;
         }
@@ -51,22 +50,25 @@ namespace Systems.GroundSpawnSystem
         private string SpawnOre(int ySpawnOffset)
         {
             var randomFloat = GetRandomFloat();
-            
+
             var cellName = "";
-            
-            switch(randomFloat)
+
+            switch (randomFloat)
             {
-                case var _ when randomFloat <= _groundGeneratorData.spawnGoldenCellChance && ySpawnOffset <= _groundGeneratorData.startLayerForGoldenCells:
+                case var _ when randomFloat <= _groundGeneratorData.spawnGoldenCellChance &&
+                                ySpawnOffset <= _groundGeneratorData.startLayerForGoldenCells:
                     cellName = "GoldenCell";
                     break;
-                case var _ when randomFloat <= _groundGeneratorData.spawnSilverCellChance && ySpawnOffset <= _groundGeneratorData.startLayerForSilverCells:
+                case var _ when randomFloat <= _groundGeneratorData.spawnSilverCellChance &&
+                                ySpawnOffset <= _groundGeneratorData.startLayerForSilverCells:
                     cellName = "SilverCell";
                     break;
-                case var _ when randomFloat <= _groundGeneratorData.spawnCoalCellChance && ySpawnOffset <= _groundGeneratorData.startLayerForCoalCells:
+                case var _ when randomFloat <= _groundGeneratorData.spawnCoalCellChance &&
+                                ySpawnOffset <= _groundGeneratorData.startLayerForCoalCells:
                     cellName = "CoalCell";
                     break;
             }
-            
+
             return cellName;
         }
 

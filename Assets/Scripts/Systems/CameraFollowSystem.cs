@@ -11,7 +11,7 @@ public class CameraFollowSystem : ComponentSystem
         {
             var cameraTransformComponent = Camera.main.transform;
             var cameraPosition = cameraTransformComponent.position;
-            
+
             cameraTransformComponent.position = new Vector3(cameraPosition.x, translation.Value.y, cameraPosition.z);
         });
     }

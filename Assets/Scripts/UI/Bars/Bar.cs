@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Bar : MonoBehaviour, IBar
 {
     [SerializeField] private Slider bar;
-    
+
     public float MaxValue => bar.maxValue;
 
     public float CurrentValue => bar.value;

@@ -11,6 +11,20 @@ namespace Entities
         private static PlayerResources _playerResources;
         private static ShopResources _shopResources;
 
+        private void Awake()
+        {
+            InitializePlayerResources();
+            InitializeShopResources();
+
+            _groundEntities = new GroundEntities(new Dictionary<string, Entity>(), new BlobAssetStore());
+            ConvertGroundCellsToEntity();
+        }
+
+        private void OnDestroy()
+        {
+            _groundEntities.BlobAssetStore.Dispose();
+        }
+
         public static void SwitchCurrentPlayerMaterial(PlayerViewPosition viewPosition)
         {
             switch (viewPosition)
@@ -33,19 +47,10 @@ namespace Entities
         {
             return _playerResources.CurrentPlayerMaterial;
         }
-        
+
         public static Material GetShopButtonMaterial()
         {
             return _shopResources.ShopButtonMaterial;
-        }
-        
-        private void Awake()
-        {
-            InitializePlayerResources();
-            InitializeShopResources();
-
-            _groundEntities = new GroundEntities(new Dictionary<string, Entity>(), new BlobAssetStore());
-            ConvertGroundCellsToEntity();
         }
 
         private void InitializePlayerResources()
@@ -57,7 +62,7 @@ namespace Entities
                 Resources.Load<Material>("Materials/PlayerMaterialFront"),
                 simpleMesh.GetComponent<MeshFilter>().sharedMesh
             );
-            
+
             DestroyImmediate(simpleMesh);
         }
 
@@ -74,12 +79,13 @@ namespace Entities
         private void ConvertGroundCellsToEntity()
         {
             var groundCellsPrefabs = Resources.LoadAll<GameObject>("Prefabs/GroundCells/");
-            
+
             foreach (var cellPrefab in groundCellsPrefabs)
             {
                 var groundCellEntity = GameObjectConversionUtility.ConvertGameObjectHierarchy(cellPrefab,
-                    GameObjectConversionSettings.FromWorld(World.DefaultGameObjectInjectionWorld, _groundEntities.BlobAssetStore));
-            
+                    GameObjectConversionSettings.FromWorld(World.DefaultGameObjectInjectionWorld,
+                        _groundEntities.BlobAssetStore));
+
                 _groundEntities.GameEntities[cellPrefab.name] = groundCellEntity;
             }
         }
@@ -87,11 +93,6 @@ namespace Entities
         public static Entity GetGroundCell(string entityName)
         {
             return _groundEntities.GameEntities[entityName];
-        }
-
-        private void OnDestroy()
-        {
-            _groundEntities.BlobAssetStore.Dispose();
         }
     }
 }

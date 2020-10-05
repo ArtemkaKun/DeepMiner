@@ -14,7 +14,7 @@ namespace Entities
             SidePlayerMaterial = sidePlayerMaterial;
             FrontPlayerMaterial = frontPlayerMaterial;
             CurrentPlayerMaterial = sidePlayerMaterial;
-            
+
             QuadMesh = quadMesh;
         }
     }

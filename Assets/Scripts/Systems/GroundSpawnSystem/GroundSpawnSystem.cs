@@ -9,11 +9,11 @@ using Random = System.Random;
 public class GroundSpawnSystem : MonoBehaviour
 {
     [SerializeField] private GroundGeneratorData groundGeneratorData;
-    
-    private int _xSpawnOffset;
     private EntityManager _entityManager;
     private GroundCell _groundCell;
     private Random _randomSeed;
+
+    private int _xSpawnOffset;
     public int YSpawnOffset { get; private set; }
 
     private void Awake()
@@ -30,11 +30,15 @@ public class GroundSpawnSystem : MonoBehaviour
 
     public void SpawnGround(bool startGeneration = false)
     {
-        var groundCells = new NativeArray<Entity>(startGeneration ? groundGeneratorData.maxGroundCellsOnStart : groundGeneratorData.maxGroundCellInRowOnStart, Allocator.Temp);
+        var groundCells =
+            new NativeArray<Entity>(
+                startGeneration
+                    ? groundGeneratorData.maxGroundCellsOnStart
+                    : groundGeneratorData.maxGroundCellInRowOnStart, Allocator.Temp);
         var tempObject = new GameObject();
-        
+
         _entityManager.Instantiate(tempObject, groundCells);
-        
+
         SpawnGroundCells(groundCells);
 
         groundCells.Dispose();
@@ -46,23 +50,23 @@ public class GroundSpawnSystem : MonoBehaviour
         for (var i = 0; i < groundCells.Length; i++)
         {
             CheckForNewRow(i);
-            
+
             if (_groundCell.SpawnNewCell(i, YSpawnOffset, ref groundCells))
             {
                 _entityManager.SetComponentData(groundCells[i], new Translation
                 {
                     Value = new float3(_xSpawnOffset, YSpawnOffset, 0)
                 });
-                
+
                 _entityManager.SetComponentData(groundCells[i], new Rotation
                 {
                     Value = Quaternion.Euler(0, 0, RotateCellInRandomWay())
                 });
             }
-            
+
             ++_xSpawnOffset;
         }
-        
+
         SetNewRow();
     }
 
@@ -72,7 +76,7 @@ public class GroundSpawnSystem : MonoBehaviour
 
         SetNewRow();
     }
-    
+
     private void SetNewRow()
     {
         --YSpawnOffset;

@@ -14,11 +14,11 @@ namespace Systems
     {
         private const float RayLength = 0.6f;
         private const int DrillDelay = 3;
-
-        private CollisionFilter _groundCollisionFilter;
         private Entity _cellToDrill;
 
         private float _drillSpeedInSeconds = 3;
+
+        private CollisionFilter _groundCollisionFilter;
         private float _timeBuffer;
 
         protected override void OnCreate()
@@ -52,8 +52,9 @@ namespace Systems
                     var axisValues = GetInputAxisValues();
 
                     if (axisValues.VerticalAxis > 0 || !Input.GetButton("B Button")) return;
-                    if (Mathf.Abs(axisValues.HorizontalAxis) < 0.01f && Mathf.Abs(axisValues.VerticalAxis) < 0.01f) return;
-                    
+                    if (Mathf.Abs(axisValues.HorizontalAxis) < 0.01f &&
+                        Mathf.Abs(axisValues.VerticalAxis) < 0.01f) return;
+
                     if (!TryDrillByZ(axisValues, ref translation, drill.DrillPower) &&
                         !TryDrillByX(axisValues, ref translation, drill.DrillPower)) return;
 
@@ -90,7 +91,8 @@ namespace Systems
             GameUI.StorageBar.IncreaseValue(cellComponent.Weight);
         }
 
-        private bool TryDrillByZ((float HorizontalAxis, float VerticalAxis) axisValues, ref Translation translation, float drillPower)
+        private bool TryDrillByZ((float HorizontalAxis, float VerticalAxis) axisValues, ref Translation translation,
+            float drillPower)
         {
             var (horizontalAxis, verticalAxis) = axisValues;
             if (Mathf.Abs(verticalAxis) < 0.01f || Math.Abs(horizontalAxis) > 0.5f) return false;
@@ -106,11 +108,12 @@ namespace Systems
             return true;
         }
 
-        private bool TryDrillByX((float HorizontalAxis, float VerticalAxis) axisValues, ref Translation translation, float drillPower)
+        private bool TryDrillByX((float HorizontalAxis, float VerticalAxis) axisValues, ref Translation translation,
+            float drillPower)
         {
             var (horizontalAxis, verticalAxis) = axisValues;
             if (Mathf.Abs(horizontalAxis) < 0.01f || Math.Abs(verticalAxis) > 0.5f) return false;
-            
+
             _cellToDrill = CastRay(translation.Value, new float3(Mathf.Sign(horizontalAxis) * RayLength, 0, 0));
 
             if (_cellToDrill == Entity.Null || !CheckAbilityToDrillCell(_cellToDrill, drillPower)) return false;
