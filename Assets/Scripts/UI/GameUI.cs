@@ -1,5 +1,6 @@
 ﻿using System;
 using TMPro;
+using UniRx;
 using UnityEngine;
 
 public class GameUI : MonoBehaviour
@@ -31,6 +32,8 @@ public class GameUI : MonoBehaviour
         InitTextValues();
         InitBars();
         InitUIActions();
+        
+        InitializeButtonHandlers();
     }
 
     public static void AddMoney(float amount)
@@ -98,5 +101,12 @@ public class GameUI : MonoBehaviour
     private void TurnOnGameOverText()
     {
         gameOverText.gameObject.SetActive(true);
+    }
+
+    private void InitializeButtonHandlers()
+    {
+        Observable.EveryUpdate()
+            .Where(_ => Input.GetKeyDown(KeyCode.Escape))
+            .Subscribe(_ => Application.Quit());
     }
 }
