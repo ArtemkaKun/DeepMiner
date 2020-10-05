@@ -21,27 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9ca4d650-b1ad-4fce-a72c-9e9bb4c2fcca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepMiner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/GameStatusSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/GameStatusSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/ShopSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AButton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AButton.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/downIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/downIcon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/fuelBar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/fuelBar.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/fuelBarBorder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/fuelBarBorder.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/moneyIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/moneyIcon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/scoreIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/scoreIcon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/shop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/shop.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +37,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Bars/Bar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Bars/IBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/03/a4def543/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.physics@0.4.1-preview/Unity.Physics/Dynamics/Simulation/TriggerEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/MoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -120,8 +104,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/GroundSpawnSystem/GroundSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/DynamicGroundSpawnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" />
       </list>
     </option>
   </component>
@@ -195,7 +179,7 @@
       <workItem from="1598472719653" duration="186000" />
       <workItem from="1598559150579" duration="2683000" />
       <workItem from="1598721228443" duration="3759000" />
-      <workItem from="1601919699022" duration="382000" />
+      <workItem from="1601919699022" duration="1237000" />
     </task>
     <servers />
   </component>
@@ -217,6 +201,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1039" y="565" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1601920188687">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state x="1039" y="565" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.2560.1409@0.0.2560.1409" timestamp="1601920188687" />
     <state width="2517" height="523" key="GridCell.Tab.0.bottom" timestamp="1598725024010">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
@@ -295,24 +283,24 @@
           <properties documentPath="C:\Projects\DeepMiner\Assets\Scripts\Systems\DrillSystem.cs" initialLine="54">
             <startOffsets>
               <option value="1574" />
-              <option value="1670" />
+              <option value="1694" />
             </startOffsets>
             <endOffsets>
-              <option value="1669" />
-              <option value="1677" />
+              <option value="1693" />
+              <option value="1701" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/DrillSystem.cs</url>
-          <line>94</line>
+          <line>96</line>
           <properties documentPath="C:\Projects\DeepMiner\Assets\Scripts\Systems\DrillSystem.cs" initialLine="94">
             <startOffsets>
-              <option value="3090" />
+              <option value="3106" />
             </startOffsets>
             <endOffsets>
-              <option value="3138" />
+              <option value="3154" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
